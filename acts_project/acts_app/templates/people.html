@@ -1,0 +1,1633 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .title_div{
+                position:absolute;
+                width:1450px;
+                height:155px;
+                background-color:rgb(0, 115, 176);
+                margin-left:-10px;
+                margin-top:-10px;
+            }
+
+            .people_title{
+                position:absolute;
+                width:1000px;
+                height:100px;
+                font-size:75px;
+                margin-left:400px;
+                margin-top:50px;
+            }
+            
+            .navbar {
+                position: fixed; 
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 35px;
+                background-color: rgb(40, 40, 55);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 50px;
+                z-index: 1000;
+                border-bottom: 2px solid rgb(96, 96, 114);
+            }
+
+            .nav-logo-link {
+                text-decoration: none; 
+                color:white;
+                font-family:fantasy;
+                font-size:30px;        
+            }
+
+            .nav-logo:hover {
+                cursor: pointer;       
+                opacity: 0.8; 
+                color:turquoise;         
+            }
+
+            .nav-links {
+                display: flex;
+                list-style: none;
+                margin-right:70px;
+            }
+
+            .nav-links li {
+                margin-left: 30px;
+            }
+
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-family: sans-serif;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            .nav-links a:hover {
+                color: #ffd700; 
+            }
+
+            .body{
+                position:absolute;
+                width:1450px;
+                height:32700px;
+                margin-top:140px;
+                background-color:lightblue;
+                margin-left:-10px;
+            }
+
+            .img{
+                position:absolute;
+                width:200px;
+                height:300px;
+                margin-left:20px;
+                margin-top:-10px;
+            }
+
+            .label{
+                position:absolute;
+                margin-left:250px;
+                margin-right:20px;
+                font-family:fantasy;
+            }
+
+
+            .bullets{
+                position:absolute;
+                margin-left:20px;
+            }
+
+            .peter {
+                position: absolute;
+                margin-top: 30px;
+                width: 1440px;
+            }
+
+            .john {
+                position: absolute;
+                margin-top: 1430px;
+                width: 1440px;
+            }
+
+            .james_greater {
+                position: absolute;
+                margin-top: 2630px;
+                width: 1440px;
+            }
+
+            .james_less {
+                position: absolute;
+                margin-top: 3730px;
+                width: 1440px;
+            }
+
+            .andrew {
+                position: absolute;
+                margin-top: 4630px;
+                width: 1440px;
+            }
+
+            .phillip_apostle {
+                position: absolute;
+                margin-top: 5530px;
+                width: 1440px;
+            }
+
+            .paul {
+                position: absolute;
+                margin-top: 6330px;
+                width: 1440px;
+            }
+
+            .saul {
+                position: absolute;
+                margin-top: 7830px;
+                width: 1440px;
+            }
+
+            .stephen {
+                position: absolute;
+                margin-top: 8730px;
+                width: 1440px;
+            }
+
+            .barnabas {
+                position: absolute;
+                margin-top: 9630px;
+                width: 1440px;
+            }
+
+            .aquila_priscilla {
+                position: absolute;
+                margin-top: 10730px;
+                width: 1440px;
+            }
+
+            .ananias_damascus {
+                position: absolute;
+                margin-top: 11430px;
+                width: 1440px;
+            }
+
+            .ananias_sapphira_people {
+                position: absolute;
+                margin-top: 12230px;
+                width: 1440px;
+            }
+
+            .mary_john_mark {
+                position: absolute;
+                margin-top: 13030px;
+                width: 1440px;
+            }
+
+            .cornelius {
+                position: absolute;
+                margin-top: 13830px;
+                width: 1440px;
+            }
+
+            .lydia {
+                position: absolute;
+                margin-top: 14630px;
+                width: 1440px;
+            }
+
+            .john_mark {
+                position: absolute;
+                margin-top: 15430px;
+                width: 1440px;
+            }
+
+            .silas {
+                position: absolute;
+                margin-top: 16230px;
+                width: 1440px;
+            }
+
+            .timothy {
+                position: absolute;
+                margin-top: 17130px;
+                width: 1440px;
+            }
+
+            .titus {
+                position: absolute;
+                margin-top: 17930px;
+                width: 1440px;
+            }
+
+            .luke {
+                position: absolute;
+                margin-top: 18630px;
+                width: 1440px;
+            }
+
+            .tabitha {
+                position: absolute;
+                margin-top: 19430px;
+                width: 1440px;
+            }
+
+            .apollos {
+                position: absolute;
+                margin-top: 20230px;
+                width: 1440px;
+            }
+
+            .simon_sorcerer {
+                position: absolute;
+                margin-top: 21080px;
+                width: 1440px;
+            }
+
+            .ethiopian_eunuch_person {
+                position: absolute;
+                margin-top: 21830px;
+                width: 1440px;
+            }
+
+            .gamaliel {
+                position: absolute;
+                margin-top: 22630px;
+                width: 1440px;
+            }
+
+            .caiaphas {
+                position: absolute;
+                margin-top: 23430px;
+                width: 1440px;
+            }
+
+            .herod_agrippa {
+                position: absolute;
+                margin-top: 24030px;
+                width: 1440px;
+            }
+
+            .festus {
+                position: absolute;
+                margin-top: 24830px;
+                width: 1440px;
+            }
+
+            .felix {
+                position: absolute;
+                margin-top: 25730px;
+                width: 1440px;
+            }
+
+            .king_agrippa_2 {
+                position: absolute;
+                margin-top: 26630px;
+                width: 1440px;
+            }
+
+            .jews {
+                position: absolute;
+                margin-top: 27530px;
+                width: 1440px;
+            }
+
+            .gentiles {
+                position: absolute;
+                margin-top: 28330px;
+                width: 1440px;
+            }
+
+            .pharisees {
+                position: absolute;
+                margin-top: 28930px;
+                width: 1440px;
+            }
+
+            .sadducees {
+                position: absolute;
+                margin-top: 29730px;
+                width: 1440px;
+            }
+
+            .sanhedrin {
+                position: absolute;
+                margin-top: 30330px;
+                width: 1440px;
+            }
+
+            .roman_soldiers {
+                position: absolute;
+                margin-top: 31030px;
+                width: 1440px;
+            }
+
+            .early_christians {
+                position: absolute;
+                margin-top: 31730px;
+                width: 1440px;
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="title_div">
+            <label class="people_title">People/People Groups</label>
+        </div>
+
+        <nav class="navbar">
+            <a href="{% url 'home' %}" class="nav-logo-link">
+                <div class="nav-logo">Acts Project</div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="{% url 'people_page' %}">People/People Groups</a></li>
+                <li><a href="{% url 'places_page' %}">Places</a></li>
+                <li><a href="{% url 'time_page' %}">Time Periods</a></li>
+                <li><a href="{% url 'events_page' %}">Events</a></li>
+                <li><a href="{% url 'miscellaneous_page' %}">Miscellaneous</a></li>
+                <li><a href="{% url 'jokes_page' %}">Bible 8 Jokes</a></li>
+                <li><a href="{% url 'about_page' %}">About</a></li>
+            </ul>
+        </nav>
+
+        <div class="body">
+            <div class="peter">
+                <form>
+                    <img src="{% static 'peter.jpg' %}" class="img" alt="Peter Image">
+                    <label class="label">
+                        <b>Peter</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        He was born with the name "Simon" in the Galileean village of Bethsaida. His brother, Andrew, was another one of Jesus' disciples. Peter was a witness to many of Jesus' most notable events such as the Transfiguration, the raising of Jarius's daughter, the Garden of Gethsamane, the feeding of the 5,000, along with dozens of other significant and impactful moments. Peter is often cited as a man who, despite being very imperfect, had much faith and ended up spreading Christianity to thousands of people. He denied Jesus 3 times during his arrest, turned to the waves when walking on water, and even cut off a servant's ear. However, Jesus still commissioned him to "feed my sheep," essentially making him the head of the early church (which is why Catholics point to him as the first Pope). After the ascension, he became witness to many of the early church's most significant events, including Pentecost, the first bringing of the gospel to gentiles, and the healing of many people. He was arrested 3 times, but managed to escape each time. Eventually, the authorities caught up with him and he was famously crucified upside down.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Pentecost (Acts 2)</li>
+                            <li>Healing Aeneas (Acts 3:1-10)</li>
+                            <li>Healing the Lame Man (Acts 3)</li>
+                            <li>Facing the Sanhedrin/First Arrest (Acts 4)</li>
+                            <li>Confronting Ananias and Sapphira (Acts 5)</li>
+                            <li>Rebuking of Simon the Sorcerer (Acts 8:14-25)</li>
+                            <li>Raising Tabitha (Acts 9:32-35)</li>
+                            <li>Converting Cornelius (Acts 10)</li>
+                            <li>Being Rescued From Herod Agrippa's Prison by an Angel (Acts 12)</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>He was the disciple who performed the most miracles (6).</li>
+                            <li>He was the only other person in history to walk on water except for Jesus.</li>
+                            <li>He was the first disciple to meet Jesus after the resurrection and the encounter in the locked room.</li>
+                            <li>He was crucified upside down because he didn't feel worthy to be executed in the same way as Jesus.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Peter in Acts:</b>
+                        <br><br>
+                        In the Acts of the Apostles, Saint Peter is one of the main leaders of the early Church after Jesus goes back up to heaven. At the beginning of the book, Peter leads the other believers in choosing someone to replace Judas. They choose Matthias to be one of the twelve apostles (Acts 1:15–26). This shows that Peter was already taking responsibility and helping guide the group.
+                        <br><br>
+                        In Acts chapter 2, Peter gives a powerful speech on the day of Pentecost when the Holy Spirit comes to the believers. He explains to the crowd what is happening and tells them about Jesus. Because of his message, about three thousand people are baptized that day (Acts 2:14–41). This was a huge moment for the Church, and it shows how bold Peter had become.
+                        <br><br>
+                        Peter also performs miracles through God's power. In Acts 3:1–10, he heals a man who could not walk at the temple gate called Beautiful. Later, in Acts 5:1–11, Peter confronts Ananias and Sapphira for lying about money they gave to the Church and they DIE. In Acts 5:15, people literally hoped that Peter's shadow might heal them as he walked by. These events show that God was working through Peter in amazing ways.
+                        <br><br>
+                        Peter faced persecution for preaching about Jesus. In Acts 4:1–22, he and John are arrested for teaching in the name of Jesus. Even after being warned to stop, Peter boldly says, "We must obey God rather than men" (Acts 5:29). This shows his courage and strong faith, even when he was threatened.
+                        <br><br>
+                        Later in Acts, Peter helps spread the gospel to Gentiles (non-Jews). In Acts 10, he has a vision from God and then visits a Roman centurion named Cornelius. When Peter preaches to him and his household, they receive the Holy Spirit (Acts 10:34–48). This was an important turning point because it showed that the message of Jesus was for everyone, not just the Jewish people. Overall, Peter plays a major role in leading, teaching, healing, and helping the early Church grow in the Book of Acts.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="john">
+                <form>
+                    <img src="{% static 'john.jpg' %}" class="img" alt="John Image">
+                    <label class="label">
+                        <b>John</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        John the Apostle was one of Jesus' twelve disciples and was the son of Zebedee and the brother of James. Before following Jesus, he worked as a fisherman just like many other disciples. Jesus gave John and his brother the nickname "Sons of Thunder," probably because they had strong personalities (Mark 3:17) (which sounds really cool). John was part of Jesus' inner circle, along with Peter and James. He saw important events like the Transfiguration and when Jesus prayed in the Garden of Gethsemane. Many Christians believe John wrote the Gospel of John, 1–3 John, and Revelation. He lived a long life and continued teaching people about Jesus.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Stayed in Jerusalem after Jesus went back to heaven (Acts 1:13)</li>
+                            <li>Pentecost (Acts 2:1–4)</li>
+                            <li>Helped heal a man who could not walk at the temple gate called Beautiful (Acts 3:1–10)</li>
+                            <li>Was there when Peter preached to the crowd after the healing (Acts 3:11–26)</li>
+                            <li>Was arrested with Peter for preaching about Jesus (Acts 4:1–3)</li>
+                            <li>Spoke boldly to the Sanhedrin (Acts 4:13–20)</li>
+                            <li>Actually died a natural death instead of being executed (which is a very unnatural death for the apostles sadly).</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>He was one of only a few people who got to look into heaven. Among the others were Ezekial, Elijah, and Stephen.</li>
+                            <li>He was also one of the only people to receive a vision about the endtimes. Among the others were Daniel and some other people whom I'm too lazy to research.</li>
+                            <li>For some reason, instead of being killed, he was sent into exile.</li>
+                            <li>He was one of Jesus' inner circle. He was one of the few people to witness the transfiguration, the Garden of Gethsemane, and his empty tomb.</li>
+                            <li>He is in one of the best superbook episodes ever.</li>
+                            <li>According to pictures of him, he had a really chopt hairline.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br><br>
+                        <b>John in Acts:</b>
+                        <br><br>
+                        In the book of Acts, John was one of the leaders in the early church. After Jesus went back to heaven, John stayed in Jerusalem with the other apostles. They waited for the Holy Spirit, just like Jesus told them to. In Acts 2, John was there when the Holy Spirit came at Pentecost. This was a big moment because it marked the start of the Christian church.
+                        <br><br>
+                        In Acts 3, John went with Peter to the temple to pray. They saw a man who had not been able to walk since birth. Through the power of Jesus, the man was healed. John stood next to Peter during this miracle. A big crowd gathered, and Peter preached about Jesus. Even though John did not do the talking, he was still part of the event and helped spread the message.
+                        <br><br>
+                        After this, John and Peter were arrested in Acts 4. The religious leaders did not like (like, really didn't like) that they were teaching about Jesus rising from the dead. When they were brought before the Sanhedrin, they did not act scared and refused to stop talking about Jesus. This shows he was brave and serious about his faith.
+                        <br><br>
+                        Later in Acts 8, John went with Peter to Samaria. Many people there believed in Jesus and John prayed for them so they could receive the Holy Spirit. This was important because it showed that the message of Jesus was spreading to more places. Overall, in Acts, John is shown as faithful, brave, and committed to helping grow the early church.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="james_greater">
+                <form>
+                    <img src="{% static 'james_john_bro.webp' %}" class="img" alt="James Brother of John Image">
+                    <label class="label">
+                        <b>James Brother of John (James the Greater)</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        James, the brother of John the Apostle, was one of the twelve apostles of Jesus Christ and part of Jesus's closest inner circle. He was a fisherman before following Jesus and quickly became known for his bold personality—Jesus even nicknamed James and John the "Sons of Thunder." James witnessed several major moments in Jesus's ministry, including the Transfiguration and Jesus raising Jairus's daughter. In the early church, he became an important leader and missionary. He is most remembered for being the first apostle to be executed for his faith when Herod Agrippa I had him killed (Acts 12:1–2). James was also present in the upper room after Jesus's ascension (Acts 1:13–14).
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>James is listed among the apostles gathered in Jerusalem after Jesus's ascension (Acts 1:13)</li>
+                            <li>James joins the believers praying together in the upper room (Acts 1:14)</li>
+                            <li>James is arrested during King Herod's persecution of church leaders (Acts 12:1)</li>
+                            <li>James is executed by the sword, becoming the first apostle martyred (Acts 12:2)</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>He was called camel legs because of how intense his prayer habits were (which is a less cool name than sons of thunder).</li>
+                            <li>He was John's older brother, explaining his nickname as James the elder.</li>
+                            <li>He is often called James the Greater to avoid confusion with James the Less (who ironically was Jesus' brother).</li>
+                            <li>He was likely among the oldest of the apostles.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>James in Acts:</b>
+                        <br><br>
+                        James appears early in Acts as one of the core disciples who stayed together after Jesus returned to heaven. He was in Jerusalem with the other apostles, praying and waiting for guidance (Acts 1:13–14). This shows he remained a committed leader from the very start of the early church.
+                        <br><br>
+                        Although Acts focuses more on Peter and later Paul, James is shown as part of the main group leading the church's growth. He would have shared responsibility for teaching, organizing believers, and spreading Jesus's message throughout Jerusalem during a time when Christianity was still very new and sometimes dangerous.
+                        <br><br>
+                        James also lived during a period of increasing persecution. Religious leaders and political rulers were worried about how fast the Christian movement was growing. As a well-known apostle, James would have been a visible target.
+                        <br><br>
+                        His life in Acts ends suddenly but powerfully. King Herod Agrippa I arrested several church leaders to stop the movement, and James was executed by the sword (Acts 12:1–2). This made him the first apostle to be martyred, showing how serious the risks were for early Christian leaders.
+                        <br><br>
+                        Even though his role in Acts is brief, his death had a big impact. It showed that the apostles were willing to die for their faith, which strengthened other believers. His martyrdom also marks a turning point where persecution became more intense and the church began spreading even farther beyond Jerusalem.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="james_less">
+                <form>
+                    <img src="{% static 'james_jesus_bro.jpeg' %}" class="img" alt="James the Less Image">
+                    <label class="label">
+                        <b>James the Less</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        James the Less, also called James son of Alphaeus, was one of the twelve apostles of Jesus Christ. He earned the nickname "the Less" most likely because he was younger, shorter (LOL), or simply less well-known than James the Greater. The Bible doesn't record many specific stories about him, but he was part of Jesus's close group of disciples and stayed committed throughout Jesus's ministry. After the resurrection, James continued as a faithful member of the early church. Some church traditions connect him with leadership roles and missionary work, but the Bible itself keeps his role brief and low-profile.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Was at Jesus's ascension (Acts 1:13)</li>
+                            <li>Prayed in the upper room (Acts 1:14)</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>He's called "the Less" to avoid confusion with James the Greater.</li>
+                            <li>His picture depicts him without a finger on his right hand.</li>
+                            <li>He was one of the original twelve apostles chosen by Jesus.</li>
+                            <li>Very little is recorded about his words, which shows not every important leader is famous.</li>
+                            <li>Some traditions say he may have traveled to preach in different regions after Jesus's ascension.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br>
+                        <b>James the Less in Acts:</b>
+                        <br><br>
+                        James the Less appears briefly in Acts as part of the group of apostles who stayed in Jerusalem after Jesus returned to heaven. He is specifically named among the eleven disciples gathered together (Acts 1:13). This shows he remained faithful and continued working with the core leadership of the early church.
+                        <br><br>
+                        He was also present with the believers who met constantly for prayer (Acts 1:14). Even though Acts doesn't describe his individual actions, being part of this group mattered a lot. These were the people leading the early Christian movement, making decisions, teaching others, and supporting the church during a time when their faith could be dangerous. All in all, it took a lot of word fat to fill two paragraphs about him.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="andrew">
+                <form>
+                    <img src="{% static 'andrew.jpg' %}" class="img" alt="Andrew Image">
+                    <label class="label">
+                        <b>Andrew</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Andrew was one of the twelve apostles of Jesus Christ and the brother of Simon Peter. Before following Jesus, Andrew worked as a fisherman, but he became one of the first disciples called to join Jesus's ministry. He is known for bringing people to Jesus, including introducing his brother Peter. Andrew stayed loyal through Jesus's ministry, crucifixion, and resurrection, and he continued serving as a leader in the early church. After Jesus ascended to heaven, Andrew remained with the apostles in Jerusalem, praying and helping guide the growing group of believers (Acts 1:13–14).
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Witnesses Jesus's ascension (Acts 1:13)</li>
+                            <li>Meets together in constant prayer (Acts 1:14)</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Andrew was one of the very first disciples Jesus called.</li>
+                            <li>He was originally a follower of John the Baptist before meeting Jesus.</li>
+                            <li>He is the brother of Peter, one of the most famous apostles.</li>
+                            <li>Andrew is known for quietly bringing others to Jesus rather than seeking attention.</li>
+                            <li>Tradition says he later became a missionary in areas around Greece and was martyred.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br>
+                        <b>Andrew in Acts:</b>
+                        <br><br>
+                        Andrew's role in Acts is brief but still important. After Jesus returned to heaven, Andrew stayed in Jerusalem with the other apostles instead of going back to his old life. This shows his commitment to the mission Jesus gave them. He is specifically listed among the eleven apostles who gathered together (Acts 1:13). Being named means he was recognized as part of the core leadership group responsible for guiding the early church during a confusing and uncertain time.
+                        <br><br>
+                        Andrew was also present when the believers met constantly for prayer and unity (Acts 1:14). These meetings helped strengthen the group and prepare them for spreading Christianity. Even though Acts does not record Andrew speaking or leading major events, he was still part of the foundation of the early church and shared in its risks and responsibilities.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="phillip_apostle">
+                <form>
+                    <img src="{% static 'philip.jpg' %}" class="img" alt="Philip the Apostle Image">
+                    <label class="label">
+                        <b>Philip the Apostle</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Philip was one of the twelve apostles chosen by Jesus Christ. He was from Bethsaida, the same town as Peter and Andrew, and he was personally called by Jesus to follow Him (John 1:43). Philip is often shown in the Gospels as thoughtful and practical, sometimes asking questions to better understand what Jesus was teaching. He also brought his friend Nathanael (Bartholomew) to meet Jesus, showing that he cared about sharing his faith. After Jesus's resurrection and ascension, Philip remained committed to the group of apostles and continued helping lead the early church.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Was at Jesus's ascension (Acts 1:13)</li>
+                            <li>Philip joins the believers meeting together in constant prayer (Acts 1:14)</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>He was personally called by Jesus rather than coming through another disciple.</li>
+                            <li>He brought Nathanael to Jesus.</li>
+                            <li>He asked Jesus questions at the Last Supper (John 14:8–9).</li>
+                            <li>He is sometimes confused with Philip the Evangelist, but they are two different people.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Philip in Acts:</b>
+                        <br><br>
+                        Philip the Apostle appears briefly in Acts, but his presence still matters. He is specifically named among the eleven apostles who gathered together after the ascension (Acts 1:13). Being listed shows he was still part of the core leadership group of the early church. These apostles were responsible for teaching new believers and keeping the group united during a time when their faith could bring persecution.
+                        <br><br>
+                        Philip was also present when the believers met together constantly in prayer (Acts 1:14). Even though Acts does not record him giving speeches or leading major events, he helped form the foundation of the early church simply by staying faithful, united, and committed alongside the other apostles.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="paul">
+                <form>
+                    <img src="{% static 'paul.jpg' %}" class="img" alt="Paul Image">
+                    <label class="label">
+                        <b>Paul</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Paul, originally known as Saul, was one of the most influential leaders in early Christianity. He was born a Jewish Roman citizen and was highly educated in Jewish law, studying under respected teachers. At first, Saul strongly (like, realllllly strongly) opposed Christians and even helped persecute them. However, after a dramatic encounter with Jesus, his life completely changed. He became a devoted Christian missionary, traveling long distances to teach people about Jesus and help start new churches. Paul's writings and journeys shaped the growth of Christianity across the Roman world.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Saul's conversion on the road to Damascus (Acts 9:1–9)</li>
+                            <li>Saul is baptized and begins preaching (Acts 9:17–22)</li>
+                            <li>First missionary journey with Barnabas (Acts 13–14)</li>
+                            <li>Jerusalem Council about Gentile believers (Acts 15)</li>
+                            <li>Paul and Silas imprisoned in Philippi (Acts 16:22–34)</li>
+                            <li>Paul's extended ministry in Ephesus (Acts 19)</li>
+                            <li>Paul arrested in Jerusalem (Acts 21:27–33)</li>
+                            <li>Paul defends himself before Roman leaders (Acts 22–26)</li>
+                            <li>Paul's voyage and shipwreck on the way to Rome (Acts 27)</li>
+                            <li>Paul under house arrest preaching in Rome (Acts 28:16–31)</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Paul was both a Jew and a Roman citizen, which gave him important legal protections.</li>
+                            <li>He originally persecuted Christians before becoming one.</li>
+                            <li>"Saul" is his Hebrew name, and "Paul" is his Roman name.</li>
+                            <li>He supported himself by working as a tentmaker.</li>
+                            <li>He traveled thousands of miles by land and sea as a missionary.</li>
+                            <li>He was beheaded instead of crucified because he was a Roman Citizen.</li>
+                            <li>Wrote the most books of the Bible out of anyone.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br><br><br>
+                        <b>Paul in Acts:</b>
+                        <br><br>
+                        Paul first appears in Acts under the name Saul. He is present when Stephen becomes the first Christian martyr and approves of his execution (Acts 7:58; 8:1). After this, Saul actively persecutes Christians, entering homes and arresting believers. At this point, he sees Christianity as a threat and tries to stop it.
+                        <br><br>
+                        Everything changes on the road to Damascus. Saul encounters a blinding vision of Jesus and realizes he has been fighting against God (Acts 9:1–9). This moment leads to his conversion. After being healed and baptized, he begins preaching that Jesus is the Son of God, surprising everyone who knew his past.
+                        <br><br>
+                        As his faith grows, Paul starts traveling to spread Christianity beyond Jewish communities. He goes on major missionary journeys across regions like Asia Minor and Greece, teaching in cities and starting churches (Acts 13–14). He often faces strong opposition but continues preaching.
+                        <br><br>
+                        Paul became one of the first major missionaries to non-Jewish people (Gentiles). This is a huge turning point because it opens Christianity to the wider world. He works with other leaders to decide that Gentile believers do not have to follow all Jewish laws (Acts 15).
+                        <br><br>
+                        During his travels, Paul performs miracles, heals people, and debates religious leaders. He preaches in synagogues, public squares, and homes. Many people accept his message, but others strongly resist him, leading to riots and arrests in several cities (Acts 16–19).
+                        <br><br>
+                        Paul is arrested multiple times but uses each situation as a chance to speak about his faith. He defends himself before governors and kings, explaining his conversion and beliefs (Acts 22–26). His Roman citizenship sometimes protects him from harsh punishment.
+                        <br><br>
+                        In the final chapters of Acts, Paul is sent to Rome for trial after appealing to Caesar. Even as a prisoner, he continues teaching and encouraging believers. Acts ends with Paul under house arrest in Rome, still boldly preaching about Jesus (Acts 27–28). Paul is also 50% of the Action Bible New Testament. HI ASHVATH!!!!! WE'RE IN T
+                    </label>
+                </form>
+            </div>
+            
+            <div class="saul">
+                <form>
+                    <img src="{% static 'saul.webp' %}" class="img" alt="Saul Image">
+                    <label class="label">
+                        <b>Saul</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Before becoming the apostle Paul, Saul of Tarsus was a strict and highly educated Pharisee who strongly opposed Christianity. He was born a Jewish Roman citizen and trained in Jewish law under respected teachers, which made him deeply committed to protecting traditional beliefs. Saul believed the growing Christian movement was dangerous and misleading people, so he actively tried to stop it. He supported efforts to arrest believers and approved of harsh punishments against them, thinking he was serving God by doing so (and oh boy was he wrong). While the number of Christians he killed or was involved in their killings isn't known, it was likely more than you can count with your body parts (including nose, ears, and eyebrows).
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Approves of Stephen's stoning (Acts 7:54-60)</li>
+                            <li>Goes to Damascus to kill more Christians (Acts 9:1-19)</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Saul was born in Tarsus, an important Roman city known for education.</li>
+                            <li>He was both a Roman citizen and a Pharisee, which was unusual and gave him influence.</li>
+                            <li>He studied Jewish law under Gamaliel, a highly respected teacher.</li>
+                            <li>He spoke multiple languages, including Greek and Hebrew.</li>
+                            <li>His Roman citizenship gave him special legal rights and protection.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br>
+                        <b>Saul in Acts:</b>
+                        <br><br>
+                        Saul first appears in Acts during the execution of Stephen, the first Christian martyr. He watched over the cloaks of those carrying out the execution and approved of what happened (Acts 7:58; 8:1). This moment marks him as an active supporter of efforts to stop Christianity.
+                        <br><br>
+                        After that, Saul became one of the leading persecutors of Christians. He went from house to house arresting men and women and sending them to prison (Acts 8:3). He later asked for official permission to travel to Damascus so he could arrest more believers and bring them back to Jerusalem for punishment (Acts 9:1–2). These actions show how determined he was to eliminate the Christian movement before his life-changing encounter with Jesus.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="stephen">
+                <form>
+                    <img src="{% static 'stephen.jpeg' %}" class="img" alt="Stephen Image">
+                    <label class="label">
+                        <b>Stephen</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Stephen was one of the first church leaders chosen to help serve believers, and he became the first Christian martyr. He was known for strong faith, wisdom, and bold speaking. Even when facing serious opposition, Stephen stood firm and defended his beliefs. His courage made a huge impact on the early church.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Chosen as church servant/leader (Acts 6:5)</li>
+                            <li>Performs great wonders and signs (Acts 6:8)</li>
+                            <li>Debates religious leaders (Acts 6:9–10)</li>
+                            <li>Gives speech before council (Acts 7:1–53)</li>
+                            <li>Martyred (Acts 7:54–60)</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>One of the Seven chosen to serve the church.</li>
+                            <li>Powerful speaker and debater.</li>
+                            <li>First Christian martyr.</li>
+                            <li>His death deeply affected Saul (Paul).</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Stephen in Acts:</b>
+                        <br><br>
+                        Stephen was chosen as one of seven leaders to help care for believers and manage church needs (Acts 6:1–6). He quickly became known for his faith and wisdom. He performed miracles and boldly debated religious leaders who tried to oppose him (Acts 6:8–10). They couldn't win arguments, so they accused him falsely.
+                        <br><br>
+                        Stephen gave a long, powerful speech explaining Israel's history and confronting the leaders about resisting God (Acts 7:1–53). The crowd became just a little angry. They were so timidly annoyed that they dragged him outside and stoned him becoming the first Christian martyr (Acts 7:54–60). Even while dying, he prayed for forgiveness for his attackers (which is insanely impressive).
+                    </label>
+                </form>
+            </div>
+            
+            <div class="barnabas">
+                <form>
+                    <img src="{% static 'barnabas.jpg' %}" class="img" alt="Barnabas Image">
+                    <label class="label">
+                        <b>Barnabas</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Barnabas was an early Christian leader known for his generosity and encouragement. His real name was Joseph, but the apostles nicknamed him Barnabas, which means "son of encouragement," and honestly that fits. He was from Cyprus and became an important supporter of the early church in Jerusalem. When many believers were scared and unsure, Barnabas stepped up and helped people feel supported. He also played a huge role in helping Paul get accepted by the apostles when nobody trusted him yet.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Sells land and gives money to church (Acts 4:36–37)</li>
+                            <li>Brings Paul to the apostles and defends him (Acts 9:27)</li>
+                            <li>Sent to Antioch to help growing church (Acts 11:22–24)</li>
+                            <li>Travels on First Missionary Journey with Paul (Acts 13–14)</li>
+                            <li>Speaks at Jerusalem Council (Acts 15:12)</li>
+                            <li>Disagrees with Paul and separates (Acts 15:36–40)</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>His real name was Joseph.</li>
+                            <li>Sold land and donated the money to the church.</li>
+                            <li>Known for encouraging others (like, professionally encouraging).</li>
+                            <li>Missionary partner of Paul.</li>
+                            <li>Had a disagreement with Paul over John Mark.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br>
+                        <b>Barnabas in Acts:</b>
+                        <br><br>
+                        Barnabas first shows up as a generous believer who sells property and gives the money to support the church (Acts 4:36–37). This helped Christians who were struggling and set an example of sharing. However, this was very, very, very, very, very, very, very, very far from the only thing he did for the early church.
+                        <br><br>
+                        Later, when Paul tried to join the disciples after converting, everyone was suspicious (obviously). Barnabas believed Paul was genuine and personally introduced him to the apostles (Acts 9:27). That decision changed Christian history. As the church grew, Barnabas was sent to Antioch to guide new believers. He encouraged them and helped build a strong church community (Acts 11:22–24). He then went to find Paul so they could teach together.
+                        <br><br>
+                        Barnabas traveled with Paul on the First Missionary Journey, preaching and starting churches in new regions (Acts 13–14). He helped bring Christianity beyond Jewish communities. At the Jerusalem Council Barnabas spoke about how God was working among Gentiles (Acts 15). Later, he and Paul argued about John Mark and went separate ways which is kind of funny if you think about it. Even good teams have drama sometimes.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="aquila_priscilla">
+                <form>
+                    <img src="{% static 'priscilla.jpg' %}" class="img" alt="Aquila and Priscilla Image">
+                    <label class="label">
+                        <b>Aquila & Priscilla</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Aquila and Priscilla were a married couple who worked closely with Paul and helped teach early Christians. They were tentmakers by trade and strong church leaders.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Meet Paul in Corinth (Acts 18:1–3)</li>
+                            <li>Travel with Paul (Acts 18:18)</li>
+                            <li>Teach Apollos more accurately (Acts 18:26)</li>
+                        </ul>
+                        <br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Married ministry duo.</li>
+                            <li>Worked same job as Paul.</li>
+                            <li>Helped teach Apollos.</li>
+                            <li>Hosted churches in their home.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Aquila & Priscilla in Acts:</b>
+                        <br><br>
+                        They met Paul in Corinth and worked with him as tentmakers while supporting the ministry (Acts 18:1–3). They later traveled with Paul and continued helping churches grow (Acts 18:18). When Apollos needed clearer teaching, they kindly explained things more accurately (Acts 18:26).
+                    </label>
+                </form>
+            </div>
+            
+            <div class="ananias_damascus">
+                <form>
+                    <img src="{% static 'ananias_damscus.webp' %}" class="img" alt="Ananias of Damascus Image">
+                    <label class="label">
+                        <b>Ananias (Damascus)</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Ananias was a disciple living in Damascus who played a small (like there's literally like 12 verses) but extremely important role in Paul's story. He was a faithful believer chosen by God for a very specific(ish) mission. Even though he wasn't famous, his obedience mattered a lot.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Gets vision telling him to find Saul (Acts 9:10–12)</li>
+                            <li>Heals Saul and restores his sight (Acts 9:17–18)</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Not the same Ananias who lied (very different guy).</li>
+                            <li>Helped Paul at his most vulnerable moment (after he was blinded).</li>
+                            <li>Was able to help a man who came to his city to kill people like him.</li>
+                            <li>If we are considering everything in Acts, he is one of the most important people in the whole book because he healed Paul.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Ananias in Acts:</b>
+                        <br><br>
+                        Ananias didn't do much in Acts, but the things he did literally changed the world. God appeared to him in a vision telling him to help a little-known scary guy named Paul who was blinded, fell off his horse, and was in the middle of a busy road. This man came to his city with the sole intent of killing Christians. Ananias, being a Christian, was understandably afraid.
+                        <br><br>
+                        However, his saving of Paul changed the world. Without Paul, Christianity would have taken a very different road. It may have even died out, fundamentally changing history forever and ever and ever and ever and ever…You'll be back like before I will fight the fight—oh whoops.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="ananias_sapphira_people">
+                <form>
+                    <img src="{% static 'ananias_liar.jpg' %}" class="img" alt="Ananias and Sapphira Image">
+                    <label class="label">
+                        <b>Ananias and Sapphira</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Ananias and Sapphira were members of the early church who became known for dishonesty. They wanted to look generous without actually being generous, which backfired badly. Their story is one of the most serious warning moments in Acts. Whenever you feel like lying, look back to this story and know that if you lie, you will DIE…wait don't take it like that.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Sell property but lie about money (Acts 5:1–2)</li>
+                            <li>Peter confronts Ananias (Acts 5:3–4)</li>
+                            <li>Ananias dies (Acts 5:5)</li>
+                            <li>Sapphira repeats lie and dies (Acts 5:7–10)</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Tried to fake a full donation.</li>
+                            <li>Failed at faking a full donation.</li>
+                            <li>Their story made the whole church more serious about honesty.</li>
+                        </ul>
+                        <br><br><br><br><br><br>
+                        <b>Ananias and Sapphira in Acts:</b>
+                        <br><br>
+                        Their story is short, but powerful and warning. What happens is the couple sells their property and pretends to be all nice and generous and stuff to the disciples. In reality, they kept some of the money to themselves. Peter tells Ananias that he had lied to God and Ananias dies. Sapphira, unaware her husband just died because he lied, lied and died. This story sent a message to all of the church saying that lying is not the wisest thing to do.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="mary_john_mark">
+                <form>
+                    <img src="{% static 'mary_johnm.webp' %}" class="img" alt="Mary Mother of John Mark Image">
+                    <label class="label">
+                        <b>Mary Mother of John Mark</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Mary was an early Christian in Jerusalem and the mother of John Mark. She is remembered for opening her home to believers during a dangerous time. Her house became an important meeting place for prayer and support. She is also mentioned almost never in the book, as literally 2-3 verses have her in the scene.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Believers gather at her house to pray for Peter (Acts 12:12)</li>
+                            <li>Peter comes to her house (Acts 12:13)</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>She was likely wealthy.</li>
+                            <li>She was either Barnabas' cousin or aunt (how they don't know which one is weird).</li>
+                            <li>She was trusted by Peter, for Peter went to her after he escaped prison.</li>
+                            <li>Her house might have been the scene for Pentecost or the Last Supper.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Mary in Acts:</b>
+                        <br><br>
+                        Mary's house became a safe gathering place for Christians. When Peter was imprisoned, many believers met at her home to pray together (Acts 12:12). Having a safe place to meet was extremely important during persecution. Her hospitality helped the church stay connected and strong. Her bravery also helped the Church survive the traumatic early years of its existence.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="cornelius">
+                <form>
+                    <img src="{% static 'cornelius.webp' %}" class="img" alt="Cornelius Image">
+                    <label class="label">
+                        <b>Cornelius</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Cornelius was a centurion in the Italian regiment. He was already a Christian by the time that he's mentioned in the Bible. An angel appeared to him during his prayer time, saying that he was to send for Peter. Cornelius obeyed, and once Peter came to his house, Cornelius, his relatives, and his close friends all heard the word of God from Peter. They were all baptized, including Cornelius himself.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Visit by an angel (Acts 10:1-8)</li>
+                            <li>Peter arrives at the house and Cornelius explains what happened (Acts 10:24-33)</li>
+                            <li>Peter speaks to Cornelius about Jesus (Acts 10:34-43)</li>
+                            <li>Cornelius is officially converted and baptized (Acts 10:44-48)</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Some Bible scholars believe that Cornelius was the centurion in Matthew 8:5-13. An unnamed centurion goes to Jesus to ask for the healing of his servant. Jesus told him because of his faith, his servant was healed.</li>
+                            <li>Cornelius was a Gentile, which means it was against Jewish law to talk to him, but Peter had gotten a vision from God saying that he had made it okay to share the gospel with Gentiles (see the section on Peter's vision of animals, which if I got that vision, I would probably faint).</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Cornelius in Acts:</b>
+                        <br><br>
+                        Cornelius brought many of his relatives and close friends to hear Peter's message. They all believed and were baptized. Then, the holy spirit came down upon them, essentially creating the 2nd Pentecost. Cornelius is a lesser character in terms of being mentioned, but a massively important character considering his impact on the church. His baptism showed that gentiles could also become Christian, and his conversion marked the official inclusion of gentiles (of 97%-98% of the world population at that time).
+                    </label>
+                </form>
+            </div>
+            
+            <div class="lydia">
+                <form>
+                    <img src="{% static 'lydia.jpeg' %}" class="img" alt="Lydia Image">
+                    <label class="label">
+                        <b>Lydia</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Lydia was a believer in Christ who lived in the city of Philippi. The Lord opened her eyes to what Paul was preaching outside the city. Afterward, she and her household were baptized. Lydia invited Paul and Silas (I'm assuming) into her house and said that "If you consider me a believer in the Lord, come and stay at my house.". She persuaded them.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Listening to Paul's message (Acts 16:13-14)</li>
+                            <li>Inviting Paul to her house (Acts 16:15)</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>She was very wealthy and is described to be in purple cloth.</li>
+                            <li>After Paul and Silas got out of prison (see the section on Paul in Philippi prison), they returned to Lydia's house before they left the city.</li>
+                            <li>She was the first Christian converted in Europe.</li>
+                        </ul>
+                        <br><br><br><br><br><br>
+                        <b>Lydia in Acts:</b>
+                        <br><br>
+                        While she doesn't have too big of a role in acts, Lydia was still one of the many people who were baptized in the name of the Holy Spirit. Her house would also serve as a place where the believers in Philippi would meet, as shown in verse 40. This implies that she probably helped host meetings or prayer sessions with the other new Christians of the town.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="john_mark">
+                <form>
+                    <img src="{% static 'john_mark.jpg' %}" class="img" alt="John Mark Image">
+                    <label class="label">
+                        <b>John Mark</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        John Mark (aka John aka Mark) was an early Christian missionary and the son of Mary. He traveled with major church leaders and is traditionally connected to writing the Gospel of Mark. His journey wasn't perfect (as he caused a heated argument between Paul and Barnabas), but he grew a lot.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Joins Paul and Barnabas (Acts 12:25; 13:5)</li>
+                            <li>Leaves mission early (Acts 13:13)</li>
+                            <li>Causes disagreement between Paul and Barnabas (Acts 15:37–39)</li>
+                        </ul>
+                        <br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Cousin of Barnabas.</li>
+                            <li>Traveled with Paul and Barnabas.</li>
+                            <li>Left a mission trip early.</li>
+                            <li>Later became a trusted helper.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>John Mark in Acts:</b>
+                        <br><br>
+                        John Mark traveled with Paul and Barnabas as a helper on their mission (Acts 12:25; 13:5). However, he left the trip early and returned home (Acts 13:13). We don't know exactly why, but Paul wasn't happy about it. Later, Barnabas wanted to give him another chance, but Paul disagreed heartedly. The argument split their team (Acts 15:37–39). Still, John Mark eventually matured and became an important church leader. While he isn't mentioned a lot in Acts, he is still an important figure.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="silas">
+                <form>
+                    <img src="{% static 'silas.jpeg' %}" class="img" alt="Silas Image">
+                    <label class="label">
+                        <b>Silas</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Silas was an important early church leader and missionary who worked closely with Paul. He was respected in the Jerusalem church and chosen to help deliver important decisions to other believers. Silas was bold, loyal, and willing to suffer for his faith. He traveled long distances spreading Christianity and supporting new churches.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Chosen as church leader and messenger (Acts 15:22)</li>
+                            <li>Travels with Paul on Second Missionary Journey (Acts 15:40)</li>
+                            <li>Imprisoned with Paul in Philippi (Acts 16:22–25)</li>
+                            <li>Helps strengthen churches (Acts 15:41)</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Also called Silvanus in some letters.</li>
+                            <li>Roman citizen like Paul.</li>
+                            <li>Sang worship songs while in prison with Paul.</li>
+                            <li>Trusted messenger for church leaders.</li>
+                            <li>One of the kids in my CG at church is named Silas.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br>
+                        <b>Silas in Acts:</b>
+                        <br><br>
+                        Silas first appears as a respected leader in Jerusalem who was chosen to carry an important letter to Gentile believers (Acts 15:22). That means people trusted him a lot. He then became Paul's missionary partner on the Second Missionary Journey (Acts 15:40). They traveled through Asia Minor encouraging churches and teaching new believers.
+                        <br><br>
+                        In Philippi, Silas was arrested, beaten, and thrown into prison with Paul (Acts 16:22–24). Instead of giving up, they prayed and sang hymns. A literal earthquake freed them, which is kinda insane (Acts 16:25–26). Afterward, they helped the jailer and his family become believers. He was also chosen instead of John Mark in Paul's second missionary journey because he left in the middle of the first journey. You can see the argument in a little detail in the section above (I sound like a youtube video. "I pUt ThE lInK iN tHe DeScRiPtIoN bElOw.").
+                    </label>
+                </form>
+            </div>
+            
+            <div class="timothy">
+                <form>
+                    <img src="{% static 'timothy.jpg' %}" class="img" alt="Timothy Image">
+                    <label class="label">
+                        <b>Timothy</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Timothy was a young Christian leader who became one of Paul's closest helpers. His mother was Jewish and his father was Greek, which helped him connect with different groups. Even though he was young, he proved to be responsible and faithful in ministry.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Joins Paul's missionary team (Acts 16:1–3)</li>
+                            <li>Travels to strengthen churches (Acts 16–18)</li>
+                            <li>Present during major ministry work (Acts 17:14–15)</li>
+                        </ul>
+                        <br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Taught by Paul.</li>
+                            <li>Young (we don't know how young, but the Bible made a point to mention it. Maybe like 5 or 6 yrs old?)</li>
+                            <li>Mixed Jewish and Greek background.</li>
+                            <li>Later received letters named after him.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Timothy in Acts:</b>
+                        <br><br>
+                        Timothy joined Paul during the Second Missionary Journey (Acts 16:1–3). Paul saw potential energy in him and chose him as a travel partner. He helped deliver messages, support churches, and encourage believers across different cities. Timothy became a reliable assistant and learned directly from Paul's example. He also was a major leading figure at the church at Ephesus.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="titus">
+                <form>
+                    <img src="{% static 'titus.jpeg' %}" class="img" alt="Titus Image">
+                    <label class="label">
+                        <b>Titus</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Titus was a trusted Gentile Christian who worked closely with Paul. He became an important church leader and helped handle difficult situations. Even though he isn't named directly in Acts, he played a big role during this time period and was almost certainly working during this period.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Ministry partner during Acts-era missions (not named directly)</li>
+                        </ul>
+                        <br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Greek (Gentile) believer.</li>
+                            <li>Close ministry partner of Paul.</li>
+                            <li>Living example that Gentiles were fully accepted.</li>
+                            <li>Problem-solver type of leader.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Titus in Acts:</b>
+                        <br><br>
+                        Titus worked alongside Paul during the same missionary period described in Acts. While Luke doesn't mention him by name, Paul's letters show Titus helped organize churches and support believers. He likely assisted with teaching, leadership, and communication between churches. Sometimes important people are working behind the scenes, which is still important. (Yes, I was running out of people to put there)
+                    </label>
+                </form>
+            </div>
+            
+            <div class="luke">
+                <form>
+                    <img src="{% static 'luke.jpg' %}" class="img" alt="Luke Image">
+                    <label class="label">
+                        <b>Luke</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Luke was a doctor, historian, and the author of the Gospel of Luke and Acts. He carefully recorded events so future generations could understand what happened. Luke also traveled with Paul on several journeys. He often wrote in witness testimonies, making his writings detailed and complete.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Joins Paul's team (Acts 16:10)</li>
+                            <li>Travels on missionary journeys (Acts 16–28)</li>
+                            <li>Present during Paul's journey to Rome (Acts 27–28)</li>
+                            <li>Wrote the book we have spent 30+ hours on (half of which was within the last 2 weeks)</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Only Gentile author of a New Testament book.</li>
+                            <li>Wrote Luke 🤯 and Acts.</li>
+                            <li>Very detail-oriented writer.</li>
+                            <li>Medical background (so probably the group medic).</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Luke in Acts:</b>
+                        <br><br>
+                        Luke joins the story when the narration switches to "we," meaning he was traveling with Paul (Acts 16:10). That's actually a cool writing detail that I found after randomly reading through Acts in search of details on Paul's missionary journeys while researching Paul. He traveled across regions, witnessed major events, and carefully documented them. His records help historians and Christians understand how the early church grew. Luke stayed with Paul through dangerous journeys, including the voyage and shipwreck on the way to Rome (Acts 27). While he may not be known as well for helping expand the early church, his works have inspired people for almost 2,000 years, helping bring millions of people to God (which is pretty important I think).
+                    </label>
+                </form>
+            </div>
+            
+            <div class="tabitha">
+                <form>
+                    <img src="{% static 'peter_tabitha.jpeg' %}" class="img" alt="Tabitha Image">
+                    <label class="label">
+                        <b>Tabitha</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Tabitha was a follower of Christ who lived in the city of Lydda. Unfortunately, she grew sick and passed away. But the other Christians in the city heard that Peter was nearby in the town of Joppa. They sent two men to find and ask him for help. When Peter arrived at the house where Tabitha's body lay, he went upstairs and told her to get up. And at that moment, she came back to life and got up on her feet.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Other believers mourn for her death (Acts 9:39)</li>
+                            <li>Peter raises her from the dead (Acts 9:40-41)</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Tabitha was well-loved in the city for doing good and helping the poor.</li>
+                            <li>She was a very valued member of the Christian community in Joppa.</li>
+                            <li>She would sow clothes for the poor.</li>
+                            <li>Her Greek name was Dorcas, which means "gazelle" in the Greek language.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Tabitha in Acts:</b>
+                        <br><br>
+                        Despite not having a large role in the book of acts overall, Tabitha did help bring many people to God when she was raised from the dead. But we do know that while she was still alive she embodied the spirit of Christ by giving to the poor and needy. Tabitha set an example for how followers of Christ should live their lives.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="apollos">
+                <form>
+                    <img src="{% static 'apollos.webp' %}" class="img" alt="Apollos Image">
+                    <label class="label">
+                        <b>Apollos</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Apollos was a Jewish believer from Alexandria, a city well known for education and philosophy. He was highly knowledgeable in the Scriptures and became an early Christian preacher who spoke with confidence and skill. Apollos had a strong understanding of God's promises and taught accurately about Jesus as far as he knew. He quickly became respected for his ability to explain complex ideas clearly and to persuade people through careful reasoning. His willingness to keep learning and growing made him an important leader in the early church.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Preaches boldly in Ephesus (Acts 18:24–25)</li>
+                            <li>Taught more accurately by Priscilla and Aquila (Acts 18:26)</li>
+                            <li>Strengthens believers in Achaia (Acts 18:27–28)</li>
+                        </ul>
+                        <br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Came from Alexandria, a major center of learning.</li>
+                            <li>Known as an excellent public speaker.</li>
+                            <li>Very knowledgeable in Scripture.</li>
+                            <li>Humble enough to accept correction.</li>
+                            <li>Helped strengthen multiple churches (Probably).</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br>
+                        <b>Apollos in Acts:</b>
+                        <br><br>
+                        Apollos first appears in Acts as a passionate and skilled teacher who spoke boldly in the synagogue at Ephesus. He understood the Scriptures well and taught about Jesus with enthusiasm, although his knowledge was not yet complete (Acts 18:24–25). His teaching still helped many people understand important truths about God.
+                        <br><br>
+                        Priscilla and Aquila heard him speak and kindly took him aside to explain the way of God more accurately (Acts 18:26). Apollos listened humbly and accepted their guidance, which helped him grow as a teacher. Afterward, he traveled to Achaia, where he strongly supported believers and debated opponents using Scripture to show that Jesus is the Messiah (Acts 18:27–28).
+                    </label>
+                </form>
+            </div>
+            
+            <div class="simon_sorcerer">
+                <form>
+                    <img src="{% static 'simon_sorcerer.jpg' %}" class="img" alt="Simon the Sorcerer Image">
+                    <label class="label">
+                        <b>Simon the Sorcerer</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Simon was a "sorcerer" 🤯 in Samaria who performed magic to amaze people. Many people said that he was the great power of God. When Philip began preaching the gospel in Samaria, many people, including Simon himself, came to believe in Christ. But after observing how Philip could heal others, he asked Peter and John, who had also come to the city, if he could be granted that power. Peter rejected the offer, saying that Simon was full of bitterness and captive to sin. He also told him to repent to God in hope that he might forgive him. So Simon asked Peter and John to pray for his forgiveness by God.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Hearing about the gospel (Acts 8:12-13)</li>
+                            <li>Asking Peter for the power of healing (Acts 8:18)</li>
+                            <li>Rejected by Peter (Acts 8:20-23)</li>
+                        </ul>
+                        <br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Simon wasn't the only person in Samaria to perform "magic". Samaritans believed in the practice of sorcery and there were most likely others "sorcerers" who performed for people.</li>
+                            <li>It's unknown whether Simon repented to the Lord himself.</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Simon the Sorcerer in Acts:</b>
+                        <br><br>
+                        Simon didn't have a large role in Acts overall. However, he and many other Samaritans were the first in their country to hear and receive the teachings of Jesus. They learned how God's power was beyond anything that their false magic could do. Simon himself was amazed at the miracles that the disciples performed.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="ethiopian_eunuch_person">
+                <form>
+                    <img src="{% static 'ethiopia_eunuch.jpeg' %}" class="img" alt="Ethiopian Eunuch Image">
+                    <label class="label">
+                        <b>Ethiopian Eunuch</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        The Ethiopian Eunuch is a minor, but very interesting part of Acts. We don't know much about him other than he was a court official for the queen of Ethiopia. He likely wanted to become a Christian, but had trouble understanding scripture (I mean, if you read the passage on Isaiah he was reading, you'd be cOnFuSiOnEd, too). He is an important reminder of the joy of the Holy Spirit, understanding scripture, and being eager to learn more.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Encountered Philip (Acts 8:30-31)</li>
+                            <li>Baptized by Philip (Acts 8:36,38-39) (For some reason, the version I used didn't have verse 37)</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>He was a court official.</li>
+                            <li>He was in charge of all of the queen's treasure.</li>
+                            <li>He witnessed Philip being "Carried away" by the holy spirit and him being "no more." (Which is kind of weird)</li>
+                        </ul>
+                        <br><br><br><br><br><br>
+                        <b>Ethiopian Eunuch in Acts:</b>
+                        <br><br>
+                        His story may seem like just another story at first, but when you think about it, it's really weird. Why would God send Philip to the desert just to baptize one person? This is a very interesting thing (I sound like Mr. Fairweather again) as it shows God's love is personal. Essentially what happened is he was confused about what a scripture in Isaiah meant, Philip helped him understand it, and he was basically baptized on the spot. He also got to see Philip disappear before his eyes, which is really cool.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="gamaliel">
+                <form>
+                    <img src="{% static 'gamaliel.jpg' %}" class="img" alt="Gamaliel Image">
+                    <label class="label">
+                        <b>Gamaliel</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Not much is known about this guy. All we really know is that he was a wise and honored Pharisee. His story is very short, yet it is interesting. He boldly addressed the Sanhedrin in the defense of the disciples. His actions may have helped dozens of people go to Christ without him even knowing it. The few verses he is in is a reminder that we must be bold and stand up to authorities.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Referenced Theudas and Judas (the Galilean) for the only time in the Bible (Acts 5:36-37)</li>
+                            <li>Defended the disciples (Acts 5:38-39)</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>He mentioned two people that aren't mentioned anywhere else in the Bible, Theudas and Judas.</li>
+                            <li>He advocated for the disciples when pretty much everyone else rallied against them.</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Gamaliel in Acts:</b>
+                        <br><br>
+                        His story is 5 verses long, yet it is a very impressive reminder that standing up to authorities and people of status is effective, and it can make a big difference. His wise words convinced the Sanhedrin to let the disciples off of the hook (for now). While we don't know that much about him, we do know that he is respected, Jewish, wise, and part of the Sanhedrin. His very short, 3 verse speech convinced the Sanhedrin that fighting the disciples might end in them fighting God himself.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="caiaphas">
+                <form>
+                    <img src="{% static 'caiaphas.jpg' %}" class="img" alt="Caiaphas Image">
+                    <label class="label">
+                        <b>Caiaphas</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Pretty nothing is known about this guy. All we know is that he was part of the high priest's family. He also was Jewish and eventually died 🤯.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>He existed (Acts 4:6)</li>
+                            <li>Helped accuse Peter and John</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>He was part of the high priest's family.</li>
+                        </ul>
+                        <br><br><br><br>
+                        <b>Caiaphas in Acts:</b>
+                        <br><br>
+                        He existed.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="herod_agrippa">
+                <form>
+                    <img src="{% static 'herod_agrippa.webp' %}" class="img" alt="Herod Agrippa Image">
+                    <label class="label">
+                        <b>Herod Agrippa</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        He was a nasty guy. He was one of the most significant persecutors of Christians. He did a lot of things to Christians and throughout Chapter 12, he killed and arrested multiple Christians. However, not only did this do almost nothing to break the spirit and determination of the disciples, he would die one of the most embarrassing deaths a king could wish for.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Executed James the greater (Acts 12:2)</li>
+                            <li>Arrested Peter (Acts 12:3-4)</li>
+                            <li>Killed the guards who slept while an angel freed Peter (Acts 12:19)</li>
+                            <li>Eaten by worms (Acts 12:23)</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>He was the king of Judea, appointed by Rome.</li>
+                            <li>He had close friendships with Caligula (a maniac) and Claudius (a legitimately good ruler).</li>
+                            <li>He once had to flee from a debt collector for spending a ton of money.</li>
+                        </ul>
+                        <br><br><br><br><br><br>
+                        <b>Herod Agrippa in Acts:</b>
+                        <br><br>
+                        Herod ruled with fear. He was the first person to create a martyr out of one of the disciples (James), and he almost killed Peter until he was miraculously rescued by an angel. However, perhaps the most important and significant part of his story is his death. Herod, after accepting a crowd's praise to him rather than giving it to God, was struck down and eaten by worms in front of everyone (how humiliating). This is a stark reminder that God shows anger to those who take praise for themselves.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="festus">
+                <form>
+                    <img src="{% static 'festus.jpg' %}" class="img" alt="Festus Image">
+                    <label class="label">
+                        <b>Festus</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Porcius Festus succeeded Felix as the Roman governor of Judea. He was considered more fair and practical than Felix, but he still had to deal with political pressure from Jewish leaders. Festus handled Paul's case and tried to find a solution that would satisfy both Roman law and local concerns. His leadership shows the difficulty of governing a tense and divided region.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Reviews Paul's case (Acts 25:1–5)</li>
+                            <li>Hears Paul's defense (Acts 25:6–12)</li>
+                            <li>Paul appeals to Caesar (Acts 25:11)</li>
+                            <li>Consults with Agrippa II (Acts 25:13–22)</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>He replaced Felix as governor.</li>
+                            <li>He tried to act more fairly.</li>
+                            <li>He faced pressure from Jewish leaders.</li>
+                            <li>Was involved in Paul's appeal to Caesar.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Festus in Acts:</b>
+                        <br><br>
+                        When Festus became governor, he immediately dealt with Paul's case. Jewish leaders asked him to transfer Paul to Jerusalem, but Festus chose to handle the case in Caesarea instead (Acts 25:1–5). This decision likely prevented an ambush against Paul.
+                        <br><br>
+                        During the trial, Paul defended himself and eventually appealed to Caesar, which was his legal right as a Roman citizen (Acts 25:11). Festus accepted the appeal but admitted he was unsure what charges to send with Paul. To better understand the situation, he consulted King Agrippa II (Acts 25:13–22). As a side note, he said, "'You are out of your mind, Paul!' he shouted. 'Your great learning is driving you insane.'" (Acts 26:24). I don't know if he is just blown away, confused, or legitimately thinks he is insane, but it shows that sometimes, people don't fully (or usually even nearly) understand God's plan.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="felix">
+                <form>
+                    <img src="{% static 'felix.jpg' %}" class="img" alt="Felix Image">
+                    <label class="label">
+                        <b>Felix</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        Antonius Felix was a Roman governor of Judea who ruled with significant authority over legal matters. He was known for being politically motivated and somewhat corrupt, often making decisions based on personal advantage rather than justice. Felix played an important role in Paul's trials and had the responsibility of deciding his case. He was curious about Christianity but hesitant to fully commit to any decision.
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Hears Paul's case (Acts 24:1–9)</li>
+                            <li>Listens to Paul's defense (Acts 24:10–21)</li>
+                            <li>Talks privately with Paul (Acts 24:24–26)</li>
+                            <li>Leaves Paul imprisoned (Acts 24:27)</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Roman governor with strong authority.</li>
+                            <li>Known for corruption and bribery.</li>
+                            <li>Interested in hearing Paul speak.</li>
+                            <li>Delayed decisions to benefit himself.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>Felix in Acts:</b>
+                        <br><br>
+                        Felix became involved when Paul was brought before him by Jewish leaders who accused Paul of causing unrest. Felix listened to both the accusations and Paul's defense (Acts 24:1–21). Paul clearly explained his beliefs and actions, showing that he had not broken any laws.
+                        <br><br>
+                        Felix seemed interested in Paul's message and even had private conversations with him, especially about faith and judgment (Acts 24:24–26). However, instead of making a fair decision, Felix kept Paul in prison, hoping for a bribe (which is kind of smart if you think about it). In the end, he left Paul imprisoned for two years to please others before leaving office (Acts 24:27).
+                    </label>
+                </form>
+            </div>
+            
+            <div class="king_agrippa_2">
+                <form>
+                    <img src="{% static 'agrippa_2.webp' %}" class="img" alt="King Agrippa II Image">
+                    <label class="label">
+                        <b>King Agrippa II</b>
+                        <br><br>
+                        <b>Brief Biography:</b>
+                        <br><br>
+                        King Agrippa II succeeded King Agrippa I 🤯 (see my other videos above). He faced similar problems as King Agrippa I, but handled them a little better. His most important contribution to Acts is his discussion with the governor Festus. His calculated decision shows his good and thoughtful leadership (although he wasn't the greatest person).
+                        <br><br>
+                        <b>Important Events:</b>
+                        <ul class="bullets">
+                            <li>Arrival in Caesarea (Acts 25:13-14)</li>
+                            <li>Request to Hear Paul (Acts 25:22)</li>
+                            <li>Trial Proceedings (Acts 25:23)</li>
+                            <li>Hearing Paul's Defense (Acts 26:1-29)</li>
+                            <li>Evaluation of Paul (Acts 26:30-32)</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Had marriage scandals surrounding him.</li>
+                            <li>He failed to keep peace in Jerusalem, forcing his sister to flee.</li>
+                            <li>He had the longest reign of any Herodian leader.</li>
+                            <li>He was the last Herodian leader.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br>
+                        <b>King Agrippa II in Acts:</b>
+                        <br><br>
+                        Agrippa II is portrayed as a ruler who understood the religious, political, and cultural nuances of the Jewish situation in a way the Roman governors did not. Agrippa grants Paul permission to speak. Agrippa II visited Festus and agreed to hear Paul's case to help clarify the charges (Acts 25:13–22). Because of his knowledge of Jewish beliefs, he was well suited to understand the religious issues involved.
+                        <br><br>
+                        During the hearing, Paul gave a detailed account of his life, including his persecution of Christians and his conversion (Acts 26:1–23). Paul spoke directly to Agrippa, trying to persuade him about the truth of Christianity. Agrippa responded by saying Paul was almost convincing him to become a Christian (which is incredible!) (Acts 26:28). After listening, Agrippa concluded that Paul had done nothing deserving punishment and could have been released if he had not appealed to Caesar (Acts 26:31–32). His role shows a more balanced and thoughtful response compared to earlier rulers.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="jews">
+                <form>
+                    <img src="{% static 'jews.png' %}" class="img" alt="Jews Image">
+                    <label class="label">
+                        <b>Jews</b>
+                        <br><br>
+                        <b>Brief History:</b>
+                        <br><br>
+                        The Jews were the people of Israel who followed the laws and teachings found in the Hebrew Scriptures. In the time of the Book of Acts, they were a diverse group living both in Judea and across the Roman Empire. Many Jews were deeply committed to their traditions, including the Law of Moses, temple worship, and synagogue teaching. While Christianity originally began within the Jewish community, many Jews struggled with the idea that Jesus was the Messiah. Because of this, some accepted the message and became believers, while others strongly opposed it, leading to conflict and division.
+                        <br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Judaism is one of the oldest monotheistic religions.</li>
+                            <li>Jews were spread across many regions (diaspora).</li>
+                            <li>Synagogues were important centers for teaching and worship.</li>
+                            <li>Early Christians were originally considered a Jewish group.</li>
+                            <li>Many early church leaders were Jewish.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br>
+                        <b>Jews in Acts:</b>
+                        <br><br>
+                        In Acts, the Jews play a major role in both the spread and opposition of Christianity. The apostles often began preaching in Jewish synagogues because their audience already believed in God and understood the Scriptures. Some Jews accepted the message about Jesus and became part of the early church, helping it grow quickly in places like Jerusalem and beyond.
+                        <br><br>
+                        However, many other Jews rejected the message and saw it as a challenge to their traditions and authority. This led to debates, accusations, and sometimes violent opposition against Christians. Jewish leaders were often involved in arresting apostles, putting them on trial, and trying to stop the spread of Christianity.
+                        <br><br>
+                        As the message began reaching Gentiles, tensions increased even more. Some Jews believed Gentiles needed to follow Jewish laws to become Christians, while others, like Paul, taught that faith in Jesus was enough. This conflict led to important discussions and decisions that shaped the future of Christianity. Overall, the Jews in Acts are shown as a complex group, with some helping spread the faith and others resisting it.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="gentiles">
+                <form>
+                    <img src="{% static 'gentiles.jpeg' %}" class="img" alt="Gentiles Image">
+                    <label class="label">
+                        <b>Gentiles</b>
+                        <br><br>
+                        <b>Brief History:</b>
+                        <br><br>
+                        A Gentile was basically anyone who wasn't a Jew. And in Jewish culture, gentiles were often viewed as unclean for not worshiping the true God. This was hard on a lot of people who were Christians but weren't Jews, such as Cornelius. Especially, because Jews were forbidden to teach Gentiles the gospels to them. But regardless, God's word would be spread to the Gentiles across the world.
+                        <br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>The word Gentile is an English translation of the Hebrew word goyim, which means people or nations.</li>
+                            <li>Samaritans were half Gentile and half Jewish, but regardless the Jews still viewed them as enemies.</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Gentiles in Acts:</b>
+                        <br><br>
+                        Jews were forbidden to teach Gentiles the gospels, which is why it caused a lot of controversy when Peter baptized Cornelius in Acts 10. But during events such as the Holy Spirit coming at Pentecost (Acts 2), and Peter's vision of animals (Acts 10), God showed the apostles how his kingdom is for everyone. As Peter said in Acts 10:34-35 "I now realize how true it is that God does not show favoritism, but accepts from every nation the one who fears him and does what is right.". In fact, a large majority of Acts is about the disciples, Paul, and other Christians establishing Gentile churches and bringing many Gentiles to faith.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="pharisees">
+                <form>
+                    <img src="{% static 'pharisees.webp' %}" class="img" alt="Pharisees Image">
+                    <label class="label">
+                        <b>Pharisees</b>
+                        <br><br>
+                        <b>Brief History:</b>
+                        <br><br>
+                        The Pharisees were a group of religious leaders who taught the law of Moses and the Old Testament to the Jews. Unfortunately, while they taught the law of God, they didn't actually do what God wanted them to do. And that led them to be repeatedly criticized by Jesus. Eventually the Pharisees conspired with the Sadducees to kill Jesus. They were successful (because God let them). But after Jesus rose from the dead. And his disciples went to spread the gospel to the world. The Pharisees made it their mission to stop Christianity. But if there was one thing they would learn in the process, it's that you can't stop God's plan.
+                        <br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>The Pharisees had EXTREMELY big egos and would often pray aloud in the temple or streets about how God has blessed them. They wanted people to see how holy and righteous they were.</li>
+                            <li>They were very knowledgeable about the Torah.</li>
+                            <li>The Pharisees and Sadducees were rivals, but put their differences aside when they conspired to kill Jesus.</li>
+                            <li>They made up a lot of dumb rules for the Sabbath. On that day of the week you couldn't: Heal someone, Transport items from one place to another, Only walk a certain number of steps (LOL), etc.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br><br>
+                        <b>Pharisees in Acts:</b>
+                        <br><br>
+                        The Pharisees are mentioned a ton in Acts. They repeatedly arrest the apostles for teaching the gospel and most are implied to be members of the Sanhedrin. The apostle Paul himself used to be a pharisee before changing his name and being converted. In fact, Paul was the main leader in the Pharisees goal to eliminate Christianity. If he hadn't been converted by Jesus, he could've become high priest. But nevertheless, God had a plan for Saul and he would soon become an incredible missionary and one of the main characters in Acts. Another Pharisee named Gamaliel played an important role in the Sanhedrin's decision to see if the apostles truly were carrying out the will of God. Because if they were, the Pharisees could not stop them. "You will only find yourselves fighting God." Gamaliel told them. (They seem more power-hungry than followers of God.)
+                    </label>
+                </form>
+            </div>
+            
+            <div class="sadducees">
+                <form>
+                    <img src="{% static 'sanhedrin.webp' %}" class="img" alt="Sadducees Image">
+                    <label class="label">
+                        <b>Sadducees</b>
+                        <br><br>
+                        <b>Brief History:</b>
+                        <br><br>
+                        The Sadducees were people who didn't believe in the resurrection. They also didn't believe in spirits, angels, or demons. They are first mentioned in the New Testament as people who despised Jesus and his teachings. Very similar to the Pharisees, they confronted Jesus occasionally, hoping to get him in trouble. They also conspired to kill Jesus together. The Sadducees were later disbanded in AD 70, after the city of Jerusalem was destroyed by the Romans, along with the temple.
+                        <br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>They were very influential and often held wealthy or powerful positions in the Jewish society.</li>
+                            <li>Some bible scholars and historians argue that the grand Sanhedrin (see the section on the Sanhedrin), was made up of Sadducees.</li>
+                            <li>They were more like a political party than a group of officials.</li>
+                        </ul>
+                        <br><br><br><br><br><br>
+                        <b>Sadducees in Acts:</b>
+                        <br><br>
+                        The Sadducees are mentioned several times throughout Acts. In Acts 4:1, they, along with the priests and temple guard confront Peter and John for teaching the gospel. Another mention of them can be found in Acts 5:17, where they are filled with jealousy after the apostles start to heal people across Jerusalem. Finally, the Sadducees are explained in Acts 23:8 to not believe in the resurrection or angels and spirits.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="sanhedrin">
+                <form>
+                    <img src="{% static 'disciples.webp' %}" class="img" alt="Sanhedrin Image">
+                    <label class="label">
+                        <b>Sanhedrin</b>
+                        <br><br>
+                        <b>Brief History:</b>
+                        <br><br>
+                        The Sanhedrin was a group of Jewish officials who served as a court. They were sort of like a Jewish council or court. After being formed under Roman rule, the Sanhedrin would go on to deal with political, religious, and judicial cases. Unfortunately, the Sanhedrin in Jerusalem was disbanded after a failed rebellion against Rome in 66-70 AD. However, a new Sanhedrin was formed in Jabneh and continued on its job.
+                        <br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Bible scholars have long argued about the composition of the Sanhedrin. Some believe that it was made of Sadducees, while others believe it consisted of the Pharisees, still others argue that it could have been a mix of the two groups.</li>
+                            <li>Most areas had a smaller local Sanhedrin while Jerusalem had a large grand Sanhedrin, which was similar to the present day Supreme Court in their society.</li>
+                        </ul>
+                        <br><br><br><br><br>
+                        <b>Sanhedrin in Acts:</b>
+                        <br><br>
+                        The Sanhedrin are most notably mentioned in Acts 4:1-22 where they put Peter and John on trial, only to be condemned themselves by Peter for rejecting Jesus and his teachings. The Sanhedrin appeared again in Acts 5:17-42 where they arrested the disciples for preaching in the temple courts. But at night, God sent an angel to free the apostles and in the morning the Sanhedrin found the same they had imprisoned preaching in the temple courts. They brought in the disciples and had them flogged before letting them go. The following people are actually named members of the Sanhedrin in the book of acts.
+                        <ul class="bullets">
+                            <li>Annas (the high priest)</li>
+                            <li>Caiaphas</li>
+                            <li>John</li>
+                            <li>Alexander</li>
+                            <li>Gamaliel</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br>
+                    </label>
+                </form>
+            </div>
+            
+            <div class="roman_soldiers">
+                <form>
+                    <img src="{% static 'roman_soldiers.jpeg' %}" class="img" alt="Roman Soldiers Image">
+                    <label class="label">
+                        <b>Roman Soldiers</b>
+                        <br><br>
+                        <b>Brief History:</b>
+                        <br><br>
+                        Ever since the Roman Empire became a global power in the time of Jesus, a strong military was needed to maintain order and protect such a massive kingdom. And arguably, Roman soldiers were among the most feared military forces of their time.
+                        <br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>Their armor was made of iron, bronze, and sometimes with chainmail.</li>
+                            <li>Weapons for the soldiers included the Gladius, a short sword designed for close combat, the Pilum, a long javelin used for throwing at enemies, and the Scutum, a large rectangular body shield.</li>
+                            <li>The most famous Roman battle tactic was the tesudo, or tortoise formation. It involved soldiers marching close together and using their large body shields to create a massive wall in front of, and over them. It was designed to repel even the toughest projectiles.</li>
+                            <li>Their military organization was one of the most sophisticated in the world.</li>
+                            <li>They each carried staffs with eagles on them. Losing an eagle would be a tremendous humiliation in their culture.</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br><br><br>
+                        <b>Roman Soldiers in Acts:</b>
+                        <br><br>
+                        Roman soldiers are most notably mentioned in later chapters of acts. A centurion was mentioned during Paul's arrest and another one during Paul's prison transfer. After realizing how Paul had saved everyone on the ship from certain death, he made sure that the prisoners, including Paul, were spared when they crashed on the island of Malta. Roman soldiers later guarded Paul as he preached in the city of Rome.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="early_christians">
+                <form>
+                    <img src="{% static 'persecution.webp' %}" class="img" alt="Early Christians Image">
+                    <label class="label">
+                        <b>Disciples/Early Christians</b>
+                        <br><br>
+                        <b>Brief History:</b>
+                        <br><br>
+                        The church was founded by Peter and the rest of the apostles. Many people in Jerusalem were successfully converted and thus became members of the early church. Unfortunately, the growth of the church would soon be interrupted. Because the religious leaders didn't like the idea of Jesus's teaching spreading across the city (They didn't even like Jesus to begin with). So Saul, one of the head Pharisees, began to try and arrest the church's members. He threw both men and women in jail for following Christ. The early Christians soon found themselves persecuted and scattered. But nothing could stop God's plan, and his word would eventually reach places across the land.
+                        <br><br>
+                        <b>Fun Facts:</b>
+                        <ul class="bullets">
+                            <li>The early Christians would often sell their houses, possessions, and even land just to give it to the apostles so it would be distributed among the needy.</li>
+                            <li>Another tradition of the early church was to break bread, just as Jesus had done at the last supper.</li>
+                            <li>(Not) fun fact: The early Christians would unfortunately be persecuted for a long time, but during those years, they would also grow tremendously. Churches would be established in several places around the globe.</li>
+                        </ul>
+                        <br><br><br><br><br><br>
+                        <b>Early Christians in Acts:</b>
+                        <br><br>
+                        The book of acts is pretty much focused on the conversion of many people to Christianity. It talks about missionary trips, life-changing experiences, and the holy spirit working through people to spread the gospel. The following people are just a few of the many converted in acts:
+                        <ul class="bullets">
+                            <li>Saul/Paul (Acts 9:1-19)</li>
+                            <li>Lydia (Acts 16:11-15)</li>
+                            <li>Simon the sorcerer (Acts 8:9-13)</li>
+                            <li>Ethiopian Eunuch (Acts 8:26-40)</li>
+                            <li>Jailer in Philippi (Acts 16:27-34)</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br>
+                        There were also many early Christians who we didn't see the conversion of, but were also equally important in acts. The ones listed below are a few of them:
+                        <ul class="bullets">
+                            <li>Stephen</li>
+                            <li>Tabitha</li>
+                            <li>Ananias (Not the one from Acts 5)</li>
+                            <li>Barnabas</li>
+                            <li>Silas</li>
+                            <li>Cornelius</li>
+                            <li>Mary the mother of John Mark</li>
+                        </ul>
+                        <br><br><br><br><br><br><br><br><br><br>
+                    </label>
+                </form>
+            </div>
+
+
+        </div>
+
+
+    </body>
+</html>

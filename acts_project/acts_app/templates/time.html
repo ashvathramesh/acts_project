@@ -1,0 +1,270 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .title_div{
+                position:absolute;
+                width:1450px;
+                height:155px;
+                background-color:rgb(0, 115, 176);
+                margin-left:-10px;
+                margin-top:-10px;
+            }
+
+            .places_title{
+                position:absolute;
+                width:1000px;
+                height:100px;
+                font-size:75px;
+                margin-left:600px;
+                margin-top:50px;
+            }
+            
+            .navbar {
+                position: fixed; 
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 35px;
+                background-color: rgb(40, 40, 55);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 50px;
+                z-index: 1000;
+                border-bottom: 2px solid rgb(96, 96, 114);
+            }
+
+            .nav-logo-link {
+                text-decoration: none; 
+                color:white;
+                font-family:fantasy;
+                font-size:30px;        
+            }
+
+            .nav-logo:hover {
+                cursor: pointer;       
+                opacity: 0.8; 
+                color:turquoise;         
+            }
+
+            .nav-links {
+                display: flex;
+                list-style: none;
+                margin-right:70px;
+            }
+
+            .nav-links li {
+                margin-left: 30px;
+            }
+
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-family: sans-serif;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            .nav-links a:hover {
+                color: #ffd700; 
+            }
+
+            .body{
+                position:absolute;
+                width:1450px;
+                height:3000px;
+                margin-top:140px;
+                background-color:lightblue;
+                margin-left:-10px;
+            }
+
+            .img{
+                position:absolute;
+                width:200px;
+                height:300px;
+                margin-left:20px;
+                margin-top:-10px;
+            }
+
+            .label{
+                position:absolute;
+                margin-left:250px;
+                margin-right:20px;
+                font-family:fantasy;
+            }
+
+
+            .bullets{
+                position:absolute;
+                margin-left:20px;
+            }
+
+            .after_ascension {
+                position: absolute;
+                margin-top: 30px;
+                width: 1440px;
+            }
+
+            .pentecost_period {
+                position: absolute;
+                margin-top: 530px;
+                width: 1440px;
+            }
+
+            .pauls_execution_period {
+                position: absolute;
+                margin-top: 1030px;
+                width: 1440px;
+            }
+
+            .early_jerusalem_church {
+                position: absolute;
+                margin-top: 1530px;
+                width: 1440px;
+            }
+
+            .persecution_christians {
+                position: absolute;
+                margin-top: 2030px;
+                width: 1440px;
+            }
+
+            .pauls_missionary_journeys {
+                position: absolute;
+                margin-top: 2530px;
+                width: 1440px;
+            }
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="title_div">
+            <label class="places_title">Time Periods</label>
+        </div>
+
+        <nav class="navbar">
+            <a href="{% url 'home' %}" class="nav-logo-link">
+                <div class="nav-logo">Acts Project</div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="{% url 'people_page' %}">People/People Groups</a></li>
+                <li><a href="{% url 'places_page' %}">Places</a></li>
+                <li><a href="{% url 'time_page' %}">Time Periods</a></li>
+                <li><a href="{% url 'events_page' %}">Events</a></li>
+                <li><a href="{% url 'miscellaneous_page' %}">Miscellaneous</a></li>
+                <li><a href="{% url 'jokes_page' %}">Bible 8 Jokes</a></li>
+                <li><a href="{% url 'about_page' %}">About</a></li>
+            </ul>
+        </nav>
+
+        <div class="body">
+            <div class="after_ascension">
+                <form>
+                    <img src="{% static 'jesus_ascension.jpeg' %}" class="img" alt="After Ascension Image">
+                    <label class="label">
+                        <b>After Ascension</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        When Jesus ascended, the caregivers of his tomb were shocked that Jesus was alive and had left the tomb, and went to spread the word. For the Next forty days, Jesus continued to preach and show Jerusalem the Miracles of God. The Disciples feel full of hope, and can continue preaching the word of God, and how the Holy Spirit will forever be the savior. Jesus tells the disciples that he will always be with everyone spiritually and be in them, and that the word should be spread. He continued acts of ministry, and taught all about the faith. Before, it seemed like the end of Christianity, with Jesus gone, but now, the religion was back where it used to be: Thriving. Finally, after 43 days of growing the faiths of many, Jesus finally said goodbye to his apostles, and left to heaven and back to his father.
+                        <br><br>
+                        <b>Why it is important:</b>
+                        <br><br>
+                        Faith and hope in God was restored, and those who had fled came back since they were protected again. Many others who saw him also converted and added to the number of Christians.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="pentecost_period">
+                <form>
+                    <img src="{% static 'pentecost.jpeg' %}" class="img" alt="Pentecost Image">
+                    <label class="label">
+                        <b>Pentecost</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        When Jesus promised to stay with the people, he kept his promise by sending the Holy Spirit down on the people during Pentecost. There was a blue fire around the building, and each of the people could understand the same words in their own languages, and the people at the spot all converted into Christianity, and is considered the official start of the Christian church, though some converted long before that.
+                        <br><br>
+                        <b>Why it is important:</b>
+                        <br><br>
+                        Many people were baptized here, and it marked the beginning of the church. Also, it was the return of the spirit of Jesus.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="pauls_execution_period">
+                <form>
+                    <img src="{% static 'paul_execute.webp' %}" class="img" alt="Paul's Execution Image">
+                    <label class="label">
+                        <b>Paul's Execution (Noah)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        While not specifically mentioned in Acts, tradition states that he was beheaded after being arrested for a final time. This is a very interesting thing (I feel like Mr. Fairweather during daily devos) because of how he was executed. Peter, Jesus, and many other early christians were crucified because of their faith. However, Paul was spared the pain because he was a Roman citizen.
+                        <br><br>
+                        <b>Why it is important:</b>
+                        <br><br>
+                        Paul was one of, if not the most, important people in helping spread Christianity throughout the globe. He went on missionaries that reached out to thousands of people, helped establish churches all over the Roman empire, and went on missionaries that travelled to two continents. The death of such an important person is probably important.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="early_jerusalem_church">
+                <form>
+                    <img src="{% static 'old_church.jpeg' %}" class="img" alt="Early Jerusalem Church Image">
+                    <label class="label">
+                        <b>Early Jerusalem Church</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        The early Jerusalem church is the original church, and is also the first location the disciples were told to preach at. After Christianity was kindled and nurtured in the city, brave missionaries such as Paul may have never left the city. Additionally, in the church of Jerusalem, Peter proved how gentiles can actually be saved by God, as long as they are faithful. This discovery led to the spreading of Christianity.
+                        <br><br>
+                        <b>Why it is important:</b>
+                        <br><br>
+                        This was the original city where Christianity proved itself, and has saved many people throughout the world. The Jerusalem church still remains strong today, even Christians were kicked out of Jerusalem several times in the New and Old Testament.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="persecution_christians">
+                <form>
+                    <img src="{% static 'persecution.webp' %}" class="img" alt="Persecution of Christians Image">
+                    <label class="label">
+                        <b>Persecution of Christians</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Christians were persecuted for refusing to praise the leaders or gods of the lands they lived in, only worshipping the one true God. They did the right thing, but throughout the bible, they were tortured and stoned many times. For example, in psalms 91:4 stated that "He will cover you with his opinions, and under his wings you may seek refuge; His faithfulness is a shield and bulwark." Being persecuted and not giving in proves that you are faithful and allows you to connect with the lord. In the end, being persecuted is worthy. Other times, such as when Daniel was persecuted to go to the lion's den, it can be to prove the power of god to others. The people were amazed when Daniel had not been harmed after being trapped, and converted the king to follow and praise the real god.
+                        <br><br>
+                        <b>Why it is important:</b>
+                        <br><br>
+                        Failed persecutions even after the New Testament proved to many people across the globe that God is the only one with true power, and that you must follow him in order to live a good life. Additionally, you can prove the kindness that god has given to you when you respect and pray for those who persecute you, it can surprise the persecuted and give you some respect for following your word.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="pauls_missionary_journeys">
+                <form>
+                    <img src="{% static 'paul_mission.webp' %}" class="img" alt="Paul's Missionary Journeys Image">
+                    <label class="label">
+                        <b>Paul's Missionary Journeys</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Paul made many journeys across the Eastern Mediterranean after he was converted and saw God speaking to him, and went to preach in Arabia soon after being converted for a few years, but walked back to Jerusalem to meet with Peter. He makes his first journey north, passing through cities such as Antioch and Tarsus. Several years later, he sees the need to travel even further.
+                        <br><br>
+                        <b>Works Cited:</b> https://www.theologyfortherestofus.com/pauls-four-missionary-journeys-the-complete-guide/
+                    </label>
+                </form>
+            </div>
+
+        </div>
+
+
+    </body>
+</html>

@@ -1,0 +1,4670 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            .title_div{
+                position:absolute;
+                width:1450px;
+                height:200px;
+                background-color:rgb(0, 115, 176);
+                margin-left:-10px;
+                margin-top:-10px;
+            }
+
+            .home_title{
+                position:absolute;
+                width:1000px;
+                height:100px;
+                font-size:100px;
+                margin-left:525px;
+                margin-top:30px;
+            }
+            
+            .navbar {
+                position: fixed; 
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 35px;
+                background-color: rgb(40, 40, 55);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 50px;
+                z-index: 1000;
+                border-bottom: 2px solid rgb(96, 96, 114);
+            }
+
+            .nav-logo-link {
+                text-decoration: none; 
+                color:white;
+                font-family:fantasy;
+                font-size:30px;
+            }
+
+            .nav-logo:hover {
+                cursor: pointer;       
+                opacity: 0.8; 
+                color:turquoise;         
+            }
+
+            .nav-links {
+                display: flex;
+                list-style: none;
+                margin-right:70px;
+            }
+
+            .nav-links li {
+                margin-left: 30px;
+            }
+
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-family: sans-serif;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            .nav-links a:hover {
+                color: #ffd700; 
+            }
+
+            .body{
+                position:absolute;
+                width:1450px;
+                height:12760px;
+                margin-top:120px;
+                background-color:lightblue;
+                margin-left:-10px;
+            }
+
+            /*Jerusalem*/
+            .jerusalem{
+                position:absolute;
+                width:310px;
+                height:375px;
+                margin-top:20px;
+                border-width:2x;
+                border:2px solid rgb(96, 96, 114);
+                margin-left:20px;
+                border-radius:15px;
+                background-color: white;
+            }
+
+            .jerusalem_img{
+                position:absolute;
+                width:310px;
+                height:300px;
+                margin-top:0px;
+                border-radius:15px;
+            }
+            
+            .jerusalem_l{
+                position:absolute;
+                margin-top:320px;
+                font-size:30px;
+                font-weight:bold;
+                font-family:fantasy;
+                margin-left:75px;
+            }
+
+            /*Judea*/
+            .judea{
+                position:absolute;
+                width:310px;
+                height:375px;
+                margin-top:20px;
+                border-width:2px;
+                border:2px solid rgb(96, 96, 114);
+                margin-left:380px;
+                border-radius:15px;
+                background-color: white;
+
+            }
+
+            .judea_img{
+                position:absolute;
+                width:310px;
+                height:300px;
+                margin-top:0px;
+                border-radius:15px;
+            }
+            
+            .judea_l{
+                position:absolute;
+                margin-top:320px;
+                font-size:30px;
+                font-weight:bold;
+                font-family:fantasy;
+                margin-left:75px;
+            }
+
+            /*Samaria*/
+            .samaria{
+                position:absolute;
+                width:310px;
+                height:375px;
+                margin-top:20px;
+                border-width:2x;
+                border:2px solid rgb(96, 96, 114);
+                margin-left:740px;
+                border-radius:15px;
+                background-color: white;
+
+            }
+
+            .samaria_img{
+                position:absolute;
+                width:310px;
+                height:300px;
+                margin-top:0px;
+                border-radius:15px;
+            }
+            
+            .samaria_l{
+                position:absolute;
+                margin-top:320px;
+                font-size:30px;
+                font-weight:bold;
+                font-family:fantasy;
+                margin-left:75px;
+            }
+
+            /*Damascus*/
+            .damascus{
+                position:absolute;
+                width:310px;
+                height:375px;
+                margin-top:20px;
+                border-width:2x;
+                border:2px solid rgb(96, 96, 114);
+                margin-left:1100px;
+                border-radius:15px;
+                background-color: white;
+
+            }
+
+            .damascus_img{
+                position:absolute;
+                width:310px;
+                height:300px;
+                margin-top:0px;
+                border-radius:15px;
+            }
+            
+            .damascus_l{
+                position:absolute;
+                margin-top:320px;
+                font-size:30px;
+                font-weight:bold;
+                font-family:fantasy;
+                margin-left:75px;
+            }
+
+            /* Antioch (Syria) */
+            .antioch {
+                position: absolute;
+                width: 310px;
+                height: 375px;
+                margin-top: 445px; /* Row 1 Height + Gap */
+                border: 2px solid rgb(96, 96, 114);
+                margin-left: 20px;
+                border-radius: 15px;
+                background-color: white;
+
+            }
+
+            .antioch_img { 
+                position: absolute; 
+                width: 310px; 
+                height: 300px; 
+                border-radius: 15px; }
+
+            .antioch_l { 
+                position: absolute; 
+                margin-top: 320px; 
+                font-size: 30px; 
+                font-weight: bold; 
+                font-family: fantasy; 
+                margin-left: 45px; }
+
+            /* Philippi */
+            .philippi {
+                position: absolute;
+                width: 310px;
+                height: 375px;
+                margin-top: 445px; /* Row 1 Height + Gap */
+                border: 2px solid rgb(96, 96, 114);
+                margin-left: 380px;
+                border-radius: 15px;
+                background-color: white;
+
+            }
+
+            .philippi_img { 
+                position: absolute; 
+                width: 310px; 
+                height: 300px; 
+                border-radius: 15px; }
+
+            .philippi_l { 
+                position: absolute; 
+                margin-top: 320px; 
+                font-size: 30px; 
+                font-weight: bold; 
+                font-family: fantasy; 
+                margin-left: 45px; }
+
+            /* Rome */
+            .rome {
+                position: absolute;
+                width: 310px;
+                height: 375px;
+                margin-top: 445px; /* Row 1 Height + Gap */
+                border: 2px solid rgb(96, 96, 114);
+                margin-left: 740px;
+                border-radius: 15px;
+                background-color: white;
+
+            }
+
+            .rome_img { 
+                position: absolute; 
+                width: 310px; 
+                height: 300px; 
+                border-radius: 15px; }
+
+            .rome_l { 
+                position: absolute; 
+                margin-top: 320px; 
+                font-size: 30px; 
+                font-weight: bold; 
+                font-family: fantasy; 
+                margin-left: 45px; }
+
+            /* After Ascension */
+            .after_ascension {
+                position: absolute;
+                width: 310px;
+                height: 375px;
+                margin-top: 445px; /* Row 1 Height + Gap */
+                border: 2px solid rgb(96, 96, 114);
+                margin-left: 1100px;
+                border-radius: 15px;
+                background-color: white;
+
+            }
+
+            .after_ascension_img { 
+                position: absolute; 
+                width: 310px; 
+                height: 300px; 
+                border-radius: 15px; }
+
+            .after_ascension_l { 
+                position: absolute; 
+                margin-top: 320px; 
+                font-size: 30px; 
+                font-weight: bold; 
+                font-family: fantasy; 
+                margin-left: 45px; }
+
+                /* Day of Pentecost */
+                .day_of_pentecost{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:870px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                    background-color: white;
+
+                }
+
+                .day_of_pentecost_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .day_of_pentecost_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:40px;
+                }
+
+                /* Early Jerusalem church */
+                .early_church{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:870px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                    background-color: white;
+
+                }
+
+                .early_church_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .early_church_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:15px;
+                }
+
+                /* Persecution of Christians */
+                .persecution{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:870px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .persecution_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .persecution_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:10px;
+                }
+
+                /* Paul's Missionary journeys */
+                .paul_missions{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:870px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .paul_missions_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .paul_missions_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:22px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:10px;
+                }
+
+                /* Paul's imprisonment */
+                .paul_imprisonment{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:1295px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .paul_imprisonment_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .paul_imprisonment_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:20px;
+                }
+
+                /* Peter */
+                .peter{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:1295px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .peter_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .peter_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:100px;
+                }
+
+                /* John */
+                .john{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:1295px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .john_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .john_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:110px;
+                }
+
+                /* James (Brother of John) */
+                .james_brother_john{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:1295px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .james_brother_john_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .james_brother_john_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:22px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:15px;
+                }
+
+                /* James (Brother of Jesus) */
+                .james_brother_jesus{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:1720px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .james_brother_jesus_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .james_brother_jesus_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:22px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:15px;
+                }
+
+                /* Andrew */
+                .andrew{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:1720px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .andrew_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .andrew_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:90px;
+                }
+
+                /* Phillip (apostle) */
+                .philip_apostle{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:1720px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .philip_apostle_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .philip_apostle_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:40px;
+                }
+
+                /* Saul */
+                .saul{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:1720px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .saul_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .saul_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:110px;
+                }
+
+                /* Stephen */
+                .stephen{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:2145px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .stephen_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .stephen_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:85px;
+                }
+
+                /* Barnabas */
+                .barnabas{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:2145px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .barnabas_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .barnabas_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:70px;
+                }
+
+                /* Ananias (Damascus) */
+                .ananias_damascus{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:2145px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .ananias_damascus_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .ananias_damascus_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:20px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:20px;
+                }
+
+                /* Paul */
+                .paul{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:2145px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .paul_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .paul_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:110px;
+                }
+
+                /* Ananias (liar) */
+                .ananias_liar{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:2570px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .ananias_liar_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .ananias_liar_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:50px;
+                }
+
+                /* Sapphira */
+                .sapphira{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:2570px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .sapphira_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .sapphira_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:85px;
+                }
+
+                /* Mary (mother of John Mark) */
+                .mary_john_mark{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:2570px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .mary_john_mark_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .mary_john_mark_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:20px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:10px;
+                }
+
+                /* John Mark */
+                .john_mark{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:2570px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .john_mark_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .john_mark_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:75px;
+                }
+
+                /* Silas */
+                .silas{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:2995px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .silas_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .silas_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:110px;
+                }
+
+                /* Timothy */
+                .timothy{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:2995px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .timothy_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .timothy_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:90px;
+                }
+
+                /* Titus */
+                .titus{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:2995px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .titus_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .titus_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:105px;
+                }
+
+                /* Luke */
+                .luke{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:2995px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .luke_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .luke_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:110px;
+                }
+
+                /* Apollos */
+                .apollos{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:3420px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .apollos_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .apollos_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:95px;
+                }
+
+                /* Aquila */
+                .aquila{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:3420px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .aquila_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .aquila_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:105px;
+                }
+
+                /* Priscilla */
+                .priscilla{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:3420px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .priscilla_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .priscilla_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:90px;
+                }
+
+                /* Cornelius */
+                .cornelius{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:3420px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .cornelius_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .cornelius_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:85px;
+                }
+
+                /* Lydia */
+                .lydia{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:3845px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .lydia_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .lydia_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:110px;
+                }
+
+                /* Dorcas (Tabitha) */
+                .dorcas{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:3845px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .dorcas_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .dorcas_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:50px;
+                }
+
+                /* Simon the Sorcerer */
+                .simon_sorcerer{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:3845px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .simon_sorcerer_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .simon_sorcerer_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:22px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:30px;
+                }
+
+                /* Ethiopian Eunuch */
+                .ethiopian_eunuch{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:3845px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .ethiopian_eunuch_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .ethiopian_eunuch_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:22px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:40px;
+                }
+
+                /* Gamaliel */
+                .gamaliel{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:4270px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .gamaliel_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .gamaliel_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:85px;
+                }
+
+                /* Caiaphas */
+                .caiaphas{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:4270px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .caiaphas_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .caiaphas_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:85px;
+                }
+
+                /* Herod Agrippa I */
+                .herod_agrippa_1{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:4270px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .herod_agrippa_1_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .herod_agrippa_1_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:45px;
+                }
+
+                /* Festus */
+                .festus{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:4270px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .festus_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .festus_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:100px;
+                }
+
+                /* Felix */
+                .felix{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:4695px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .felix_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .felix_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:110px;
+                }
+
+                /* King Agrippa II */
+                .agrippa_2{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:4695px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .agrippa_2_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .agrippa_2_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:55px;
+                }
+
+                /* Jews */
+                .jews{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:4695px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .jews_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .jews_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:115px;
+                }
+
+                /* Gentiles */
+                .gentiles{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:4695px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .gentiles_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .gentiles_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:95px;
+                }  
+
+                /* Felix */
+                .felix{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:4695px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .felix_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .felix_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:110px;
+                }
+
+                /* King Agrippa II */
+                .agrippa_2{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:4695px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .agrippa_2_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .agrippa_2_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:55px;
+                }
+
+                /* Jews */
+                .jews{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:4695px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .jews_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .jews_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:115px;
+                }
+
+                /* Gentiles */
+                .gentiles{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:4695px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .gentiles_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .gentiles_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:95px;
+                }
+
+                /* Pharisees */
+                .pharisees{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:5120px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .pharisees_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .pharisees_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:90px;
+                }
+
+                /* Sadducees */
+                .sadducees{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:5120px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .sadducees_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .sadducees_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:85px;
+                }
+
+                /* Sanhedrin */
+                .sanhedrin{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:5120px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .sanhedrin_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .sanhedrin_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:85px;
+                }
+
+                /* Roman Soldiers */
+                .roman_soldiers{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:5120px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .roman_soldiers_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .roman_soldiers_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:55px;
+                }
+
+                /* Disciples/early Christians */
+                .disciples{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:5545px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .disciples_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .disciples_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:20px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:45px;
+                }
+
+                /* Ascension */
+                .ascension{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:5545px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .ascension_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .ascension_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:85px;
+                }
+
+                /* Selection of Matthias */
+                .matthias{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:5545px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .matthias_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .matthias_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:20px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:50px;
+                }
+
+                /* Pentecost */
+                .pentecost_event{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:5545px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .pentecost_event_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .pentecost_event_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:85px;
+                }
+
+                /* Peter's sermon */
+                .peters_sermon{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:5970px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .peters_sermon_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .peters_sermon_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:65px;
+                }
+
+                /* Healing of the lame man */
+                .healing_lame{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:5970px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .healing_lame_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .healing_lame_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:20px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:20px;
+                }
+
+                /* Arrest of Peter and John */
+                .arrest_peter_john{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:5970px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .arrest_peter_john_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .arrest_peter_john_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:20px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:30px;
+                }
+
+                /* Ananias and Sapphira die */
+                .ananias_sapphira_die{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:5970px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .ananias_sapphira_die_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .ananias_sapphira_die_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:20px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:25px;
+                }
+
+                /* Apostles freed by angel */
+                .apostles_freed{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:6395px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .apostles_freed_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .apostles_freed_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:20px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:35px;
+                }
+
+                /* Choosing of the seven */
+                .choosing_seven{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:6395px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .choosing_seven_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .choosing_seven_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:22px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:35px;
+                }
+
+                /* Stephen's sermon */
+                .stephens_sermon{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:6395px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .stephens_sermon_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .stephens_sermon_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:55px;
+                }
+
+                /* Stephen's stoning */
+                .stephens_stoning{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:6395px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .stephens_stoning_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .stephens_stoning_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:55px;
+                }
+
+                /* Saul persecutes church */
+                .saul_persecutes{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:6820px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .saul_persecutes_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .saul_persecutes_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:22px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:35px;
+                }
+
+                /* Philip in Samaria */
+                .philip_samaria{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:6820px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .philip_samaria_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .philip_samaria_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:45px;
+                }
+
+                /* Ethiopian Eunuch baptized */
+                .eunuch_baptized{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:6820px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .eunuch_baptized_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .eunuch_baptized_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:20px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:20px;
+                }
+
+                /* Saul's conversion */
+                .saul_conversion{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:6820px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .saul_conversion_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .saul_conversion_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:45px;
+                }
+
+                /* Saul receives sight */
+                .saul_sight{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:7245px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .saul_sight_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .saul_sight_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:45px;
+                }
+
+                /* Peter heals Aeneas */
+                .peter_heals_aeneas{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:7245px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .peter_heals_aeneas_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .peter_heals_aeneas_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:35px;
+                }
+
+                /* Peter raises Tabitha */
+                .peter_raises_tabitha{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:7245px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .peter_raises_tabitha_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .peter_raises_tabitha_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:27px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:30px;
+                }
+
+                /* Peter's vision */
+                .peters_vision{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:7245px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .peters_vision_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .peters_vision_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:20px;
+                }
+
+                /* Cornelius converted */
+                .cornelius_converted{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:7670px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .cornelius_converted_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .cornelius_converted_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:30px;
+                }
+
+                /* First missionary journey */
+                .first_missionary{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:7670px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .first_missionary_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .first_missionary_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:50px;
+                }
+
+                /* Herod kills James */
+                .herod_kills_james{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:7670px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .herod_kills_james_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .herod_kills_james_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:45px;
+                }
+
+                /* Peter escapes prison */
+                .peter_escapes{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:7670px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .peter_escapes_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .peter_escapes_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:37px;
+                }
+
+                /* Second missionary journey */
+                .second_missionary{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:8095px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .second_missionary_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .second_missionary_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:20px;
+                }
+
+                /* Third missionary journey */
+                .third_missionary{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:8095px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .third_missionary_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .third_missionary_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:23px;
+                }
+
+                /* Paul's journey to Rome */
+                .paul_to_rome{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:8095px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .paul_to_rome_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .paul_to_rome_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:27px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:15px;
+                }
+
+                /* Paul in Philippi */
+                .paul_philippi{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:8095px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .paul_philippi_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .paul_philippi_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:27px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:17px;
+                }
+
+                /* Paul in Athens */
+                .paul_athens{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:8520px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .paul_athens_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .paul_athens_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:55px;
+                }
+
+                /* Paul's arrest */
+                .paul_arrest{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:8520px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .paul_arrest_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .paul_arrest_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:20px;
+                }
+
+                /* Paul's execution */
+                .paul_execution{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:8520px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .paul_execution_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .paul_execution_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:45px;
+                }
+
+                /* Tongues of fire (ITEMS START) */
+                .tongues_of_fire{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:8520px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .tongues_of_fire_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .tongues_of_fire_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:45px;
+                }
+
+                /* Cloaks */
+                .cloaks{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:8945px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .cloaks_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .cloaks_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:95px;
+                }
+
+                /* Prison doors */
+                .prison_doors{
+                    position:absolute;
+                    width:310px;
+                    background-color: white;
+                    height:375px;
+                    margin-top:8945px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .prison_doors_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .prison_doors_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:27px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:70px;
+                }
+
+                /* Stones */
+                .stones{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:8945px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .stones_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .stones_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:105px;
+                }
+
+                /* Sandals */
+                .sandals{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:8945px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .sandals_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .sandals_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:95px;
+                }
+
+                /* Bread */
+                .bread{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:9370px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .bread_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .bread_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:100px;
+                }
+                
+                /* Nets */
+                .nets{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:9370px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .nets_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .nets_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:115px;
+                }
+
+                /* Anchors */
+                .anchor{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:9370px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .anchor_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .anchor_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:95px;
+                }
+
+                /* Snake (Malta) */
+                .snake_malta{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:9370px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .snake_malta_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .snake_malta_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:65px;
+                }
+
+                /* Belts */
+                .belts{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:9795px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .belts_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .belts_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:95px;
+                }
+
+                /* Altar */
+                .altar{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:9795px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .altar_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .altar_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:115px;
+                }
+
+                /* Four Footed Animals */
+                .four_footed_animals{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:9795px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .four_footed_animals_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .four_footed_animals_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:29px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:15px;
+                }
+
+                /* Lamp */
+                .lamp{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:9795px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .lamp_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .lamp_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:105px;
+                }
+
+                /* Whip */
+                .whip{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:10220px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .whip_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .whip_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:105px;
+                }
+
+                /* Crown */
+                .crown{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:10220px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .crown_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .crown_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:100px;
+                }
+
+                /* Upper Room */
+                .upper_room{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:10220px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .upper_room_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .upper_room_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:70px;
+                }
+
+                /* Money Offering */
+                .money_offering{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:10220px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .money_offering_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .money_offering_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:40px;
+                }
+
+                /* Chains */
+                .chains{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:10645px ;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .chains_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .chains_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:95px;
+                }
+
+                /* Scrolls/Scriptures */
+                .scrolls_scriptures{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:10645px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .scrolls_scriptures_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .scrolls_scriptures_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:30px;
+                }
+
+                /* Staffs */
+                .staffs{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:10645px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .staffs_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .staffs_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:110px;
+                }
+
+                /* Wine */
+                .wine{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:10645px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .wine_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .wine_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:105px;
+                }
+
+                /* Boats */
+                .boats{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:11070px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .boats_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .boats_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:95px;
+                }
+
+                /* Cross */
+                .cross{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:11070px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .cross_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .cross_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:100px;
+                }
+
+                /* Hand Kerchiefs */
+                .hand_kerchiefs{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:11070px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .hand_kerchiefs_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .hand_kerchiefs_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:60px;
+                }
+
+                /* Prayer */
+                .prayer{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:11070px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .prayer_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .prayer_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:105px;
+                }
+
+                /* Idols */
+                .idols{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:11495px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .idols_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .idols_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:105px;
+                }
+
+                /* Temple Gate */
+                .temple_gate{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:11495px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .temple_gate_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .temple_gate_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:70px;
+                }
+
+                /* Sword */
+                .sword{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:11495px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .sword_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .sword_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:25px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:105px;
+                    font-size:29px;
+                }
+
+                /* Throne */
+                .throne{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:11495px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .throne_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .throne_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:105px;
+                }
+
+                /* Coins */
+                .coins{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:11920px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .coins_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .coins_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:95px;
+                }
+
+                /* Patrick */
+                .patrick{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:11920px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .patrick_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .patrick_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:95px;
+                }
+
+                /* Sparky */
+                .sparky{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:11920px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .sparky_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .sparky_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:95px;
+                }
+
+                /* Duck */
+                .duck{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:11920px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .duck_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .duck_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:95px;
+                }
+
+                /* Express Yourself Wall */
+                .express{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:12345px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:20px;
+                    border-radius:15px;
+                }
+
+                .express_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .express_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:20px;
+                    font-size:28px;
+                }
+
+                /* Don't Click the Button */
+                .click{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    margin-top:12345px;
+                    background-color: white;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:380px;
+                    border-radius:15px;
+                }
+
+                .click_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .click_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:37px;
+                }
+
+                /* Procrastination */
+                .procrastination{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:12345px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:740px;
+                    border-radius:15px;
+                }
+
+                .procrastination_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .procrastination_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:7px;
+                    font-size:26.5px;
+                }
+
+                /* Squiddanth */
+                .squiddanth{
+                    position:absolute;
+                    width:310px;
+                    height:375px;
+                    background-color: white;
+                    margin-top:12345px;
+                    border:2px solid rgb(96, 96, 114);
+                    margin-left:1100px;
+                    border-radius:15px;
+                }
+
+                .squiddanth_img{
+                    position:absolute;
+                    width:310px;
+                    height:300px;
+                    margin-top:0px;
+                    border-radius:15px;
+                }
+
+                .squiddanth_l{
+                    position:absolute;
+                    margin-top:320px;
+                    font-size:30px;
+                    font-weight:bold;
+                    font-family:fantasy;
+                    margin-left:7px;
+                }     
+        </style>
+    </head>
+    <body>
+
+        <div class="title_div">
+            <label class="home_title">-- Acts --</label>        
+        </div>
+
+        <nav class="navbar">
+            <a href="{% url 'home' %}" class="nav-logo-link">
+                <div class="nav-logo">Acts Project</div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="{% url 'people_page' %}">People/People Groups</a></li>
+                <li><a href="{% url 'places_page' %}">Places</a></li>
+                <li><a href="{% url 'time_page' %}">Time Periods</a></li>
+                <li><a href="{% url 'events_page' %}">Events</a></li>
+                <li><a href="{% url 'miscellaneous_page' %}">Miscellaneous</a></li>
+                <li><a href="{% url 'jokes_page' %}">Bible 8 Jokes</a></li>
+                <li><a href="{% url 'about_page' %}">About</a></li>
+            </ul>
+        </nav>
+
+        <div class="body">
+            <!--Jerusalem-->
+            <div class="jerusalem">
+                <form>
+                    <img src="{% static 'jerusalem.jpg' %}" class="jerusalem_img" alt="Jerusalem Image">
+                    <label class="jerusalem_l">Jerusalem</label>
+                </form>
+            </div>
+
+            <!--Judea-->
+            <div class="judea">
+                <form>
+                    <img src="{% static 'judea.webp' %}" class="judea_img" alt="Judea Image">
+                    <label class="judea_l">Judea</label>
+                </form>
+            </div>
+
+            <!--Samaria-->
+            <div class="samaria">
+                <form>
+                    <img src="{% static 'samaria.webp' %}" class="samaria_img" alt="Samaria Image">
+                    <label class="samaria_l">Samaria</label>
+                </form>
+            </div>
+               
+            <!--Damascus-->
+            <div class="damascus">
+                <form>
+                    <img src="{% static 'damascus.webp' %}" class="damascus_img" alt="Damascus Image">
+                    <label class="damascus_l">Damascus</label>
+                </form>
+            </div>
+
+            <!--Antioch-->
+            <div class="antioch">
+                <form>
+                    <img src="{% static 'antioch.jpg' %}" class="antioch_img" alt="Antioch Image">
+                    <label class="antioch_l">Antioch (Syria)</label>
+                </form>
+            </div>
+
+            <!--Philippi-->
+            <div class="philippi">
+                <form>
+                    <img src="{% static 'philippi.jpg' %}" class="philippi_img" alt="Philippi Image">
+                    <label class="philippi_l">Philippi</label>
+                </form>
+            </div>
+
+            <!--Rome-->
+            <div class="rome">
+                <form>
+                    <img src="{% static 'rome.avif' %}" class="rome_img" alt="Rome Image">
+                    <label class="rome_l">Rome</label>
+                </form>
+            </div>
+
+            <!--After Ascension-->
+            <div class="after_ascension">
+                <form>
+                    <img src="{% static 'ascension.jpeg' %}" class="after_ascension_img" alt="After Ascension Image">
+                    <label class="after_ascension_l">After Ascension</label>
+                </form>
+            </div>
+
+            <!--Day Of Pentecost-->
+            <div class="day_of_pentecost">
+                <form>
+                    <img src="{% static 'pentecost.jpg' %}" class="day_of_pentecost_img" alt="Pentecost Image">
+                    <label class="day_of_pentecost_l">Day of Pentecost</label>
+                </form>
+            </div>
+
+            <!--Early Church-->
+            <div class="early_church">
+                <form>
+                    <img src="{% static 'old_church.jpeg' %}" class="early_church_img" alt="Early Church Image">
+                    <label class="early_church_l">Early Jerusalem church</label>
+                </form>
+            </div>
+
+            <!--Persecution-->
+            <div class="persecution">
+                <form>
+                    <img src="{% static 'persecution.webp' %}" class="persecution_img" alt="Persecution Image">
+                    <label class="persecution_l">Persecution of Christians</label>
+                </form>
+            </div>
+
+            <!--Paul Missions-->
+            <div class="paul_missions">
+                <form>
+                    <img src="{% static 'paul_mission.webp' %}" class="paul_missions_img" alt="Missions Image">
+                    <label class="paul_missions_l">Paul's Missionary journeys</label>
+                </form>
+            </div>
+
+            <!--Paul Imprisonment-->
+            <div class="paul_imprisonment">
+                <form>
+                    <img src="{% static 'paul_prisoned.jpg' %}" class="paul_imprisonment_img" alt="Imprisonment Image">
+                    <label class="paul_imprisonment_l">Paul's imprisonment</label>
+                </form>
+            </div>
+
+            <!--Peter-->
+            <div class="peter">
+                <form>
+                    <img src="{% static 'peter.jpg' %}" class="peter_img" alt="Peter Image">
+                    <label class="peter_l">Peter</label>
+                </form>
+            </div>
+
+            <!--John-->
+            <div class="john">
+                <form>
+                    <img src="{% static 'john.jpg' %}" class="john_img" alt="John Image">
+                    <label class="john_l">John</label>
+                </form>
+            </div>
+
+            <!--James (Brother of John)-->
+            <div class="james_brother_john">
+                <form>
+                    <img src="{% static 'james_john_bro.webp' %}" class="james_brother_john_img" alt="James Image">
+                    <label class="james_brother_john_l">James (Brother of John)</label>
+                </form>
+            </div>
+
+            <!--James (Brother of Jesus)-->
+            <div class="james_brother_jesus">
+                <form>
+                    <img src="{% static 'james_jesus_bro.jpeg' %}" class="james_brother_jesus_img" alt="James Image">
+                    <label class="james_brother_jesus_l">James (Brother of Jesus)</label>
+                </form>
+            </div>
+
+            <!--Andrew-->
+            <div class="andrew">
+                <form>
+                    <img src="{% static 'andrew.jpg' %}" class="andrew_img" alt="Andrew Image">
+                    <label class="andrew_l">Andrew</label>
+                </form>
+            </div>
+
+            <!--Philip (Apostle)-->
+            <div class="philip_apostle">
+                <form>
+                    <img src="{% static 'philip.jpg' %}" class="philip_apostle_img" alt="Philip Image">
+                    <label class="philip_apostle_l">Phillip (apostle)</label>
+                </form>
+            </div>
+
+            <!--Saul-->
+            <div class="saul">
+                <form>
+                    <img src="{% static 'saul.webp' %}" class="saul_img" alt="Saul Image">
+                    <label class="saul_l">Saul</label>
+                </form>
+            </div>
+
+            <!--Stephen-->
+            <div class="stephen">
+                <form>
+                    <img src="{% static 'stephen.jpg' %}" class="stephen_img" alt="Stephen Image">
+                    <label class="stephen_l">Stephen</label>
+                </form>
+            </div>
+
+            <!--Barnabas-->
+            <div class="barnabas">
+                <form>
+                    <img src="{% static 'barnabas.jpg' %}" class="barnabas_img" alt="Barnabas Image">
+                    <label class="barnabas_l">Barnabas</label>
+                </form>
+            </div>
+
+            <!--Ananias (Damascus)-->
+            <div class="ananias_damascus">
+                <form>
+                    <img src="{% static 'ananias_damscus.webp' %}" class="ananias_damascus_img" alt="Ananias Damascus Image">
+                    <label class="ananias_damascus_l">Ananias (Damascus)</label>
+                </form>
+            </div>
+
+            <!--Paul-->
+            <div class="paul">
+                <form>
+                    <img src="{% static 'paul.jpg' %}" class="paul_img" alt="Paul Image">
+                    <label class="paul_l">Paul</label>
+                </form>
+            </div>
+
+            <!--Ananias (Liar)-->
+            <div class="ananias_liar">
+                <form>
+                    <img src="{% static 'ananias_liar.jpg' %}" class="ananias_liar_img" alt="Ananias Image">
+                    <label class="ananias_liar_l">Ananias (liar)</label>
+                </form>
+            </div>
+
+            <!--Sapphira-->
+            <div class="sapphira">
+                <form>
+                    <img src="{% static 'sapphira.jpg' %}" class="sapphira_img" alt="Sapphira Image">
+                    <label class="sapphira_l">Sapphira</label>
+                </form>
+            </div>
+
+            <!--Mary (John Mark)-->
+            <div class="mary_john_mark">
+                <form>
+                    <img src="{% static 'mary_johnm.webp' %}" class="mary_john_mark_img" alt="Mary Image">
+                    <label class="mary_john_mark_l">Mary (mother of John Mark)</label>
+                </form>
+            </div>
+
+            <!--John Mark-->
+            <div class="john_mark">
+                <form>
+                    <img src="{% static 'john_mark.jpg' %}" class="john_mark_img" alt="John Mark Image">
+                    <label class="john_mark_l">John Mark</label>
+                </form>
+            </div>
+
+            <!--Silas-->
+            <div class="silas">
+                <form>
+                    <img src="{% static 'silas.jpeg' %}" class="silas_img" alt="Silas Image">
+                    <label class="silas_l">Silas</label>
+                </form>
+            </div>
+
+            <!--Timothy-->
+            <div class="timothy">
+                <form>
+                    <img src="{% static 'timothy.jpg' %}" class="timothy_img" alt="Timothy Image">
+                    <label class="timothy_l">Timothy</label>
+                </form>
+            </div>
+
+            <!--Titus-->
+            <div class="titus">
+                <form>
+                    <img src="{% static 'titus.jpeg' %}" class="titus_img" alt="Titus Image">
+                    <label class="titus_l">Titus</label>
+                </form>
+            </div>
+
+            <!--Luke-->
+            <div class="luke">
+                <form>
+                    <img src="{% static 'luke.jpg' %}" class="luke_img" alt="Luke Image">
+                    <label class="luke_l">Luke</label>
+                </form>
+            </div>
+
+            <!--Apollos-->
+            <div class="apollos">
+                <form>
+                    <img src="{% static 'apollos.jpg' %}" class="apollos_img" alt="Apollos Image">
+                    <label class="apollos_l">Apollos</label>
+                </form>
+            </div>
+
+            <!--Aquila-->
+            <div class="aquila">
+                <form>
+                    <img src="{% static 'aquila.jpg' %}" class="aquila_img" alt="Aquila Image">
+                    <label class="aquila_l">Aquila</label>
+                </form>
+            </div>
+
+            <!--Priscilla-->
+            <div class="priscilla">
+                <form>
+                    <img src="{% static 'priscilla.jpg' %}" class="priscilla_img" alt="Priscilla Image">
+                    <label class="priscilla_l">Priscilla</label>
+                </form>
+            </div>
+
+            <!--Cornelius-->
+            <div class="cornelius">
+                <form>
+                    <img src="{% static 'cornelius_convert.jpeg' %}" class="cornelius_img" alt="Cornelius Image">
+                    <label class="cornelius_l">Cornelius</label>
+                </form>
+            </div>
+
+            <!--Lydia-->
+            <div class="lydia">
+                <form>
+                    <img src="{% static 'lydia.jpeg' %}" class="lydia_img" alt="Lydia Image">
+                    <label class="lydia_l">Lydia</label>
+                </form>
+            </div>
+
+            <!--Dorcas-->
+            <div class="dorcas">
+                <form>
+                    <img src="{% static 'dorcas.jpg' %}" class="dorcas_img" alt="Dorcas Image">
+                    <label class="dorcas_l">Dorcas (Tabitha)</label>
+                </form>
+            </div>
+
+            <!--Simon the Sorcerer-->            
+            <div class="simon_sorcerer">
+                <form>
+                    <img src="{% static 'simon_sorcerer.jpg' %}" class="simon_sorcerer_img" alt="Simon Image">
+                    <label class="simon_sorcerer_l">Simon the Sorcerer</label>
+                </form>
+            </div>
+
+            <!--Ethopian Eunuch-->
+            <div class="ethiopian_eunuch">
+                <form>
+                    <img src="{% static 'ethiopia_eunuch.jpeg' %}" class="ethiopian_eunuch_img" alt="Eunuch Image">
+                    <label class="ethiopian_eunuch_l">Ethiopian Eunuch</label>
+                </form>
+            </div>
+
+            <!--Gamaliel-->
+            <div class="gamaliel">
+                <form>
+                    <img src="{% static 'gamaliel.jpg' %}" class="gamaliel_img" alt="Gamaliel Image">
+                    <label class="gamaliel_l">Gamaliel</label>
+                </form>
+            </div>
+
+            <!--Caiaphas-->
+            <div class="caiaphas">
+                <form>
+                    <img src="{% static 'caiaphas.jpg' %}" class="caiaphas_img" alt="Caiaphas Image">
+                    <label class="caiaphas_l">Caiaphas</label>
+                </form>
+            </div>
+
+            <!--Herod Agrippa 1-->
+            <div class="herod_agrippa_1">
+                <form>
+                    <img src="{% static 'herod_agrippa.webp' %}" class="herod_agrippa_1_img" alt="Herod I Image">
+                    <label class="herod_agrippa_1_l">Herod Agrippa I</label>
+                </form>
+            </div>
+
+            <!--Festus-->
+            <div class="festus">
+                <form>
+                    <img src="{% static 'festus.jpg' %}" class="festus_img" alt="Festus Image">
+                    <label class="festus_l">Festus</label>
+                </form>
+            </div>
+
+            <!--Felix-->
+            <div class="felix">
+                <form>
+                    <img src="{% static 'felix.jpg' %}" class="felix_img" alt="Felix Image">
+                    <label class="felix_l">Felix</label>
+                </form>
+            </div>
+
+            <!--Agrippa II-->
+            <div class="agrippa_2">
+                <form>
+                    <img src="{% static 'agrippa_2.webp' %}" class="agrippa_2_img" alt="Agrippa II Image">
+                    <label class="agrippa_2_l">King Agrippa II</label>
+                </form>
+            </div>
+
+            <!--Jews-->
+            <div class="jews">
+                <form>
+                    <img src="{% static 'jews.png' %}" class="jews_img" alt="Jews Image">
+                    <label class="jews_l">Jews</label>
+                </form>
+            </div>
+
+            <!--Gentiles-->
+            <div class="gentiles">
+                <form>
+                    <img src="{% static 'gentiles.jpeg' %}" class="gentiles_img" alt="Gentiles Image">
+                    <label class="gentiles_l">Gentiles</label>
+                </form>
+            </div>
+
+            <!--Pharisees-->
+            <div class="pharisees">
+                <form>
+                    <img src="{% static 'pharisees.webp' %}" class="pharisees_img" alt="Pharisees Image">
+                    <label class="pharisees_l">Pharisees</label>
+                </form>
+            </div>
+
+            <!--Sadducees-->
+            <div class="sadducees">
+                <form>
+                    <img src="{% static 'sadducees.jpeg' %}" class="sadducees_img" alt="Sadducees Image">
+                    <label class="sadducees_l">Sadducees</label>
+                </form>
+            </div>
+
+            <!--Sanhedrin-->
+            <div class="sanhedrin">
+                <form>
+                    <img src="{% static 'sanhedrin.webp' %}" class="sanhedrin_img" alt="Sanhedrin Image">
+                    <label class="sanhedrin_l">Sanhedrin</label>
+                </form>
+            </div>
+
+            <!--Roman Soldiers-->
+            <div class="roman_soldiers">
+                <form>
+                    <img src="{% static 'roman_soldiers.jpeg' %}" class="roman_soldiers_img" alt="Soldiers Image">
+                    <label class="roman_soldiers_l">Roman Soldiers</label>
+                </form>
+            </div>
+
+            <!--Disciples-->
+            <div class="disciples">
+                <form>
+                    <img src="{% static 'disciples.webp' %}" class="disciples_img" alt="Disciples Image">
+                    <label class="disciples_l">Disciples/early Christians</label>
+                </form>
+            </div>
+
+            <!--Ascension-->
+            <div class="ascension">
+                <form>
+                    <img src="{% static 'jesus_ascension.jpeg' %}" class="ascension_img" alt="Ascension Image">
+                    <label class="ascension_l">Ascension</label>
+                </form>
+            </div>
+
+            <!--Matthias-->
+            <div class="matthias">
+                <form>
+                    <img src="{% static 'matthias.jpg' %}" class="matthias_img" alt="Matthias Image">
+                    <label class="matthias_l">Selection of Matthias</label>
+                </form>
+            </div>
+
+            <!--Pentecost-->
+            <div class="pentecost_event">
+                <form>
+                    <img src="{% static 'pentecost.jpg' %}" class="pentecost_event_img" alt="Pentecost Image">
+                    <label class="pentecost_event_l">Pentecost</label>
+                </form>
+            </div>
+
+            <!--Peter's Sermon-->
+            <div class="peters_sermon">
+                <form>
+                    <img src="{% static 'peter_sermon.jpg' %}" class="peters_sermon_img" alt="Sermon Image">
+                    <label class="peters_sermon_l">Peter's sermon</label>
+                </form>
+            </div>
+
+            <!--Healing Lame-->
+            <div class="healing_lame">
+                <form>
+                    <img src="{% static 'healing_lame.jpeg' %}" class="healing_lame_img" alt="Healing Image">
+                    <label class="healing_lame_l">Healing of the lame man</label>
+                </form>
+            </div>
+
+            <!--Arrest of Peter and John-->
+            <div class="arrest_peter_john">
+                <form>
+                    <img src="{% static 'peter_john_arrest.jpg' %}" class="arrest_peter_john_img" alt="Arrest Image">
+                    <label class="arrest_peter_john_l">Arrest of Peter and John</label>
+                </form>
+            </div>
+
+            <!--Ananias and Sapphira Die-->
+            <div class="ananias_sapphira_die">
+                <form>
+                    <img src="{% static 'annanias_sapphira.jpg' %}" class="ananias_sapphira_die_img" alt="Death Image">
+                    <label class="ananias_sapphira_die_l">Ananias and Sapphira die</label>
+                </form>
+            </div>
+
+            <!--Apostles are Freed-->
+            <div class="apostles_freed">
+                <form>
+                    <img src="{% static 'apostles_freed.jpg' %}" class="apostles_freed_img" alt="Freed Image">
+                    <label class="apostles_freed_l">Apostles freed from prison</label>
+                </form>
+            </div>
+
+            <!--Choosing of the Seven-->
+            <div class="choosing_seven">
+                <form>
+                    <img src="{% static 'choosing_seven.jpeg' %}" class="choosing_seven_img" alt="Choosing Seven Image">
+                    <label class="choosing_seven_l">Choosing of the Seven</label>
+                </form>
+            </div>
+
+            <!--Stephen's Sermon-->
+            <div class="stephens_sermon">
+                <form>
+                    <img src="{% static 'stephen_sermon.jpg' %}" class="stephens_sermon_img" alt="Sermon Image">
+                    <label class="stephens_sermon_l">Stephen's sermon</label>
+                </form>
+            </div>
+
+            <!--Stephen's Stoning-->
+            <div class="stephens_stoning">
+                <form>
+                    <img src="{% static 'stephen_stoned.jpg' %}" class="stephens_stoning_img" alt="Stoning Image">
+                    <label class="stephens_stoning_l">Stephen's stoning</label>
+                </form>
+            </div>
+
+            <!--Saul's persecution-->
+            <div class="saul_persecutes">
+                <form>
+                    <img src="{% static 'saul_persecute.jpg' %}" class="saul_persecutes_img" alt="Persecute Image">
+                    <label class="saul_persecutes_l">Saul persecutes</label>
+                </form>
+            </div>
+
+            <!--Philip Samaria-->
+            <div class="philip_samaria">
+                <form>
+                    <img src="{% static 'philip_samaria.jpeg' %}" class="philip_samaria_img" alt="Samaria Image">
+                    <label class="philip_samaria_l">Philip in Samaria</label>
+                </form>
+            </div>
+
+            <!--Eunuch Baptized-->
+            <div class="eunuch_baptized">
+                <form>
+                    <img src="{% static 'ethiopia_eunuch.jpeg' %}" class="eunuch_baptized_img" alt="Baptism Image">
+                    <label class="eunuch_baptized_l">Ethiopian Eunuch baptized</label>
+                </form>
+            </div>
+
+            <!--Saul Conversion-->
+            <div class="saul_conversion">
+                <form>
+                    <img src="{% static 'saul_convert.jpeg' %}" class="saul_conversion_img" alt="Saul Conversion Image">
+                    <label class="saul_conversion_l">Saul's conversion</label>
+                </form>
+            </div>
+
+            <!--Saul's sight-->
+            <div class="saul_sight">
+                <form>
+                    <img src="{% static 'saul_sight.jpeg' %}" class="saul_sight_img" alt="Sight Image">
+                    <label class="saul_sight_l">Saul regains sight</label>
+                </form>
+            </div>
+
+            <!--Peter Heals Aeneas-->
+            <div class="peter_heals_aeneas">
+                <form>
+                    <img src="{% static 'peter_aeneas.jpg' %}" class="peter_heals_aeneas_img" alt="Aeneas Image">
+                    <label class="peter_heals_aeneas_l">Peter heals Aeneas</label>
+                </form>
+            </div>
+
+            <!--Peter Raises Tabitha-->
+            <div class="peter_raises_tabitha">
+                <form>
+                    <img src="{% static 'peter_tabitha.jpeg' %}" class="peter_raises_tabitha_img" alt="Tabitha Image">
+                    <label class="peter_raises_tabitha_l">Peter raises Tabitha</label>
+                </form>
+            </div>
+
+            <!--Peter's Vision-->
+            <div class="peters_vision">
+                <form>
+                    <img src="{% static 'peter_animal.jpeg' %}" class="peters_vision_img" alt="Vision Image">
+                    <label class="peters_vision_l">Peter's vision of animals</label>
+                </form>
+            </div>
+
+            <!--Cornelius Converted-->
+            <div class="cornelius_converted">
+                <form>
+                    <img src="{% static 'cornelius_convert.jpeg' %}" class="cornelius_converted_img" alt="Converted Image">
+                    <label class="cornelius_converted_l">Cornelius converted</label>
+                </form>
+            </div>
+
+            <!--First Mission-->
+            <div class="first_missionary">
+                <form>
+                    <img src="{% static 'mission_1.jpeg' %}" class="first_missionary_img" alt="1st Mission Image">
+                    <label class="first_missionary_l">1st missionary</label>
+                </form>
+            </div>
+
+            <!--Herod kills James-->
+            <div class="herod_kills_james">
+                <form>
+                    <img src="{% static 'herod_james.jpg' %}" class="herod_kills_james_img" alt="Herod Image">
+                    <label class="herod_kills_james_l">Herod kills James</label>
+                </form>
+            </div>
+
+            <!--Peter Escapes-->
+            <div class="peter_escapes">
+                <form>
+                    <img src="{% static 'peter_escape.jpg' %}" class="peter_escapes_img" alt="Escape Image">
+                    <label class="peter_escapes_l">Peter escapes prison</label>
+                </form>
+            </div>
+
+            <!--Second Mission-->
+            <div class="second_missionary">
+                <form>
+                    <img src="{% static 'mission_2.png' %}" class="second_missionary_img" alt="2nd Mission Image">
+                    <label class="second_missionary_l">2nd missionary journey</label>
+                </form>
+            </div>
+
+            <!--Paul goes to Rome-->
+            <div class="paul_to_rome">
+                <form>
+                    <img src="{% static 'paul_rome.jpeg' %}" class="paul_to_rome_img" alt="Rome Journey Image">
+                    <label class="paul_to_rome_l">Paul's journey to Rome</label>
+                </form>
+            </div>
+
+            <!--Third Missionary-->
+            <div class="third_missionary">
+                <form>
+                    <img src="{% static 'mission_3.jpeg' %}" class="third_missionary_img" alt="3rd Mission Image">
+                    <label class="third_missionary_l">3rd missionary journey</label>
+                </form>
+            </div>
+
+            <!--Paul in Philippi-->
+            <div class="paul_philippi">
+                <form>
+                    <img src="{% static 'paul_philippi.jpeg' %}" class="paul_philippi_img" alt="Prison Image">
+                    <label class="paul_philippi_l">Paul in Philippi prison</label>
+                </form>
+            </div>
+
+            <!--Paul in Athens-->
+            <div class="paul_athens">
+                <form>
+                    <img src="{% static 'paul_athens.jpeg' %}" class="paul_athens_img" alt="Athens Image">
+                    <label class="paul_athens_l">Paul in Athens</label>
+                </form>
+            </div>
+
+            <!--Paul's Arrest-->
+            <div class="paul_arrest">
+                <form>
+                    <img src="{% static 'paul_arrest.jpeg' %}" class="paul_arrest_img" alt="Arrest Image">
+                    <label class="paul_arrest_l">Paul's house arrest</label>
+                </form>
+            </div>
+
+            <!--Paul's Execution-->
+            <div class="paul_execution">
+                <form>
+                    <img src="{% static 'paul_execute.webp' %}" class="paul_execution_img" alt="Execution Image">
+                    <label class="paul_execution_l">Paul's execution</label>
+                </form>
+            </div>
+
+            <!--Tongues of Fire-->
+            <div class="tongues_of_fire">
+                <form>
+                    <img src="{% static 'fire_tongue.jpeg' %}" class="tongues_of_fire_img" alt="Tongues of fire">
+                    <label class="tongues_of_fire_l">Tongues of fire</label>
+                </form>
+            </div>
+
+            <!--Cloaks-->
+            <div class="cloaks">
+                <form>
+                    <img src="{% static 'cloak.jpeg' %}" class="cloaks_img" alt="Cloaks">
+                    <label class="cloaks_l">Cloaks</label>
+                </form>
+            </div>
+
+            <!--Prison Doors-->
+            <div class="prison_doors">
+                <form>
+                    <img src="{% static 'prison_door.jpeg' %}" class="prison_doors_img" alt="Prison doors">
+                    <label class="prison_doors_l">Prison doors</label>
+                </form>
+            </div>
+
+            <!--Stones-->
+            <div class="stones">
+                <form>
+                    <img src="{% static 'stones.jpeg' %}" class="stones_img" alt="Stones">
+                    <label class="stones_l">Stones</label>
+                </form>
+            </div>
+
+            <!--Sandals-->
+            <div class="sandals">
+                <form>
+                    <img src="{% static 'sandals.jpg' %}" class="sandals_img" alt="Sandals">
+                    <label class="sandals_l">Sandals</label>
+                </form>
+            </div>
+
+            <!--Bread-->
+            <div class="bread">
+                <form>
+                    <img src="{% static 'bread.jpeg' %}" class="bread_img" alt="Bread">
+                    <label class="bread_l">Bread</label>
+                </form>
+            </div>
+
+            <!--Nets-->
+            <div class="nets">
+                <form>
+                    <img src="{% static 'nets.jpeg' %}" class="nets_img" alt="Nets">
+                    <label class="nets_l">Nets</label>
+                </form>
+            </div>
+
+            <!--Anchor-->
+            <div class="anchor">
+                <form>
+                    <img src="{% static 'anchor.webp' %}" class="anchor_img" alt="Anchor">
+                    <label class="anchor_l">Anchor</label>
+                </form>
+            </div>
+
+            <!--Snake in Malta-->
+            <div class="snake_malta">
+                <form>
+                    <img src="{% static 'snake.jpg' %}" class="snake_malta_img" alt="Snake (Malta)">
+                    <label class="snake_malta_l">Snake (Malta)</label>
+                </form>
+            </div>
+
+
+            <!--Belts-->
+            <div class="belts">
+                <form>
+                    <img src="{% static 'belts.jpg' %}" class="belts_img" alt="Belts">
+                    <label class="belts_l">Belts</label>
+                </form>
+            </div>
+
+            <!--Altar-->
+            <div class="altar">
+                <form>
+                    <img src="{% static 'altar.jpg' %}" class="altar_img" alt="Altar">
+                    <label class="altar_l">Altar</label>
+                </form>
+            </div>
+
+            <!--Four-footed Aniamls-->
+            <div class="four_footed_animals">
+                <form>
+                    <img src="{% static '4_ft.webp' %}" class="four_footed_animals_img" alt="Four footed animals">
+                    <label class="four_footed_animals_l">Four Footed Animals</label>
+                </form>
+            </div>
+
+            <!--Lamp-->
+            <div class="lamp">
+                <form>
+                    <img src="{% static 'lamp.jpg' %}" class="lamp_img" alt="Lamp">
+                    <label class="lamp_l">Lamp</label>
+                </form>
+            </div>
+            
+            <!--Whip-->
+            <div class="whip">
+                <form>
+                    <img src="{% static 'whip.jpg' %}" class="whip_img" alt="Whip">
+                    <label class="whip_l">Whip</label>
+                </form>
+            </div>
+
+            <!--Crown-->
+            <div class="crown">
+                <form>
+                    <img src="{% static 'crown.jpeg' %}" class="crown_img" alt="Crown">
+                    <label class="crown_l">Crown</label>
+                </form>
+            </div>
+
+            <!--Upper Room-->
+            <div class="upper_room">
+                <form>
+                    <img src="{% static 'upper_room.jpeg' %}" class="upper_room_img" alt="Upper room">
+                    <label class="upper_room_l">Upper room</label>
+                </form>
+            </div>
+
+            <!--Money Offering-->
+            <div class="money_offering">
+                <form>
+                    <img src="{% static 'money.jpg' %}" class="money_offering_img" alt="Money (offering)">
+                    <label class="money_offering_l">Money (offering)</label>
+                </form>
+            </div>
+
+            <!--Chains-->
+            <div class="chains">
+                <form>
+                    <img src="{% static 'chains.jpeg' %}" class="chains_img" alt="Chains">
+                    <label class="chains_l">Chains</label>
+                </form>
+            </div>
+
+            <!--Scripture Scrolls-->
+            <div class="scrolls_scriptures">
+                <form>
+                    <img src="{% static 'scrolls.jpeg' %}" class="scrolls_scriptures_img" alt="scrolls/scriptures">
+                    <label class="scrolls_scriptures_l">Scrolls/Scriptures</label>
+                </form>
+            </div>
+
+            <!--Staffs-->
+            <div class="staffs">
+                <form>
+                    <img src="{% static 'staff.jpeg' %}" class="staffs_img" alt="staffs">
+                    <label class="staffs_l">Staffs</label>
+                </form>
+            </div>
+
+            <!--Wine-->
+            <div class="wine">
+                <form>
+                    <img src="{% static 'wine.jpg' %}" class="wine_img" alt="wine">
+                    <label class="wine_l">Wine</label>
+                </form>
+            </div>
+
+            <!--Boats-->
+            <div class="boats">
+                <form>
+                    <img src="{% static 'boats.jpeg' %}" class="boats_img" alt="boats">
+                    <label class="boats_l">Boats</label>
+                </form>
+            </div>
+
+            <!--Cross-->
+            <div class="cross">
+                <form>
+                    <img src="{% static 'cross.jpeg' %}" class="cross_img" alt="cross">
+                    <label class="cross_l">Cross</label>
+                </form>
+            </div>
+
+            <!--Hand Kerchiefs-->
+            <div class="hand_kerchiefs">
+                <form>
+                    <img src="{% static 'handkerchief.jpeg' %}" class="hand_kerchiefs_img" alt="Hand-kerchiefs">
+                    <label class="hand_kerchiefs_l">Hand-kerchiefs</label>
+                </form>
+            </div>
+
+            <!--Prayer-->
+            <div class="prayer">
+                <form>
+                    <img src="{% static 'prayer.jpeg' %}" class="prayer_img" alt="Prayer">
+                    <label class="prayer_l">Prayer</label>
+                </form>
+            </div>
+
+            <!--Idols-->
+            <div class="idols">
+                <form>
+                    <img src="{% static 'idols.jpeg' %}" class="idols_img" alt="Idols">
+                    <label class="idols_l">Idols</label>
+                </form>
+            </div>
+
+            <!--Temple Gate-->
+            <div class="temple_gate">
+                <form>
+                    <img src="{% static 'temple_gate.jpeg' %}" class="temple_gate_img" alt="temple gate">
+                    <label class="temple_gate_l">Temple Gate</label>
+                </form>
+            </div>
+
+            <!--Sword-->
+            <div class="sword">
+                <form>
+                    <img src="{% static 'sword.jpg' %}" class="sword_img" alt="sword">
+                    <label class="sword_l">Sword</label>
+                </form>
+            </div>
+
+            <!--Throne-->
+            <div class="throne">
+                <form>
+                    <img src="{% static 'throne.jpeg' %}" class="throne_img" alt="throne">
+                    <label class="throne_l">Throne</label>
+                </form>                                                                                                                                                                                                                                                                                                                                         
+            </div>
+
+            <!--Coins-->
+            <div class="coins">
+                <form>
+                    <img src="{% static 'coins.webp' %}" class="coins_img" alt="Coins">
+                    <label class="coins_l">Coins</label>
+                </form>
+            </div>
+
+            <!--Patrick-->
+            <div class="patrick">
+                <form>
+                    <img src="{% static 'patrick.jpeg' %}" class="patrick_img" alt="Patrick">
+                    <label class="patrick_l">Patrick</label>
+                </form>
+            </div>
+
+            <!--Sparky-->
+            <div class="sparky">
+                <form>
+                    <img src="{% static 'sparky.jpeg' %}" class="sparky_img" alt="Patrick">
+                    <label class="sparky_l">Sparky</label>
+                </form>
+            </div>
+
+            <!--Duck-->
+            <div class="duck">
+                <form>
+                    <img src="{% static 'IMG_5089.JPG' %}" class="patrick_img" alt="Patrick">
+                    <label class="patrick_l">Duck</label>
+                </form>
+            </div>
+
+            <!--Express Yourself Wall-->
+            <div class="express">
+                <form>
+                    <img src="{% static 'express.png' %}" class="express_img" alt="Express Yourself">
+                    <label class="express_l">Express Yourself Wall</label>
+                </form>
+            </div>
+
+            <!--Don't Click This Button-->
+            <div class="click">
+                <form>
+                    <img src="{% static 'click.webp' %}" class="click_img" alt="No Clicky">
+                    <label class="click_l">Work in Progress</label>
+                </form>
+            </div>
+
+            <!--Procrastination-->
+            <div class="procrastination">
+                <form>
+                    <img src="{% static 'procrastination.jpg' %}" class="procrastination_img" alt="Procrastination">
+                    <label class="procrastination_l">Procrastination (HELP)</label>
+                </form>
+            </div>
+
+            <!--Squiddanth-->
+            <div class="squiddanth">
+                <form>
+                    <img src="{% static 'squiddanth.jpg' %}" class="squiddanth_img" alt="Express Yourself">
+                    <label class="squiddanth_l">Squiddanth Calamari</label>
+                </form>
+            </div>
+            <!----------------------------------------->
+        </div>
+    </body>
+</html>

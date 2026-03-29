@@ -1,0 +1,303 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .title_div{
+                position:absolute;
+                width:1440px;
+                height:155px;
+                background-color:rgb(0, 115, 176);
+                margin-left:-10px;
+                margin-top:-10px;
+            }
+
+            .places_title{
+                position:absolute;
+                width:1000px;
+                height:100px;
+                font-size:75px;
+                margin-left:500px;
+                margin-top:50px;
+            }
+            
+            .navbar {
+                position: fixed; 
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 35px;
+                background-color: rgb(40, 40, 55);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 50px;
+                z-index: 1000;
+                border-bottom: 2px solid rgb(96, 96, 114);
+            }
+
+            .nav-logo-link {
+                text-decoration: none; 
+                color:white;
+                font-family:fantasy;
+                font-size:30px;        
+            }
+
+            .nav-logo:hover {
+                cursor: pointer;       
+                opacity: 0.8; 
+                color:turquoise;         
+            }
+
+            .nav-links {
+                display: flex;
+                list-style: none;
+                margin-right:70px;
+            }
+
+            .nav-links li {
+                margin-left: 30px;
+            }
+
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-family: sans-serif;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            .nav-links a:hover {
+                color: #ffd700; 
+            }
+
+            .body{
+                position:absolute;
+                width:1450px;
+                height:4500px;
+                margin-top:140px;
+                background-color:lightblue;
+                margin-left:-10px;
+            }
+
+            .img{
+                position:absolute;
+                width:200px;
+                height:300px;
+                margin-left:20px;
+                margin-top:-10px;
+            }
+
+            .label{
+                position:absolute;
+                margin-left:250px;
+                margin-right:20px;
+                font-family:fantasy;
+            }
+
+
+            .bullets{
+                position:absolute;
+                margin-left:20px;
+            }
+
+            .patrick{
+                position:absolute;
+                margin-top:30px;
+            }
+
+            .patrick_vid{
+                position:absolute;
+                margin-left:300px;
+            }
+
+            .sparky{
+                position:absolute;
+                margin-top:800px;
+                width:1440px;
+            }
+            
+            .sparky_sadge{
+                position:absolute;
+                margin-left:300px;
+                font: weight 400px;
+                font-size:xx-large;
+                font-family:cursive;
+            }
+
+            .express{
+                position:absolute;
+                margin-top:1300px;
+                width:1440px;
+            }
+            
+            .express_l{
+                position:absolute;
+                margin-left:300px;
+                font: weight 400px;
+                font-size:xx-large;
+                font-family:cursive;
+            }
+
+            .duck{
+                position:absolute;
+                margin-top:1700px;
+                width:1440px;
+            }
+            
+            .duck_l{
+                position:absolute;
+                margin-top:400px;
+                font: weight 1000px;
+                font-size:xx-large;
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                margin-left:50px;
+            }
+
+            .duck_vid{
+                position:absolute;
+                margin-left:300px;
+            }
+
+            .procrastination{
+                position:absolute;
+                margin-top:2500px;
+                width:1440px;
+            }
+            
+            .procrastination_l{
+                position:absolute;
+                margin-top:400px;
+                font: weight 1000px;
+                font-size:xx-large;
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                margin-left:25px;
+            }
+
+            .procrastination_vid{
+                position:absolute;
+                margin-left:500px;
+                border-width:1;
+            }
+
+            .squiddanth{
+                position:absolute;
+                margin-top:3200px;
+                width:1440px;
+            }
+            
+            .squiddanth_l{
+                position:absolute;
+                margin-top:430px;
+                font: weight 1000px;
+                font-size:xx-large;
+                font-family:fantasy;
+                margin-left:0px;
+            }
+
+            .calamari{
+                position:absolute;
+                width:640px;
+                height:400px;
+            }
+
+            .rick_astley{
+                position:absolute;
+                margin-top:3700px;
+                width:1440px;
+            }
+            
+            .rick_roll{
+                position:absolute;
+                margin-top:430px;
+                font: weight 1000px;
+                font-size:xx-large;
+                font-family:fantasy;
+                margin-left:10px;
+            }
+
+            .THE_VID{
+                position:absolute;
+                margin-left:200px;
+                margin-top:250px;
+            }
+
+
+
+
+
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="title_div">
+            <label class="places_title">Bible 8 Jokes</label>
+        </div>
+
+        <nav class="navbar">
+            <a href="{% url 'home' %}" class="nav-logo-link">
+                <div class="nav-logo">Acts Project</div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="{% url 'people_page' %}">People/People Groups</a></li>
+                <li><a href="{% url 'places_page' %}">Places</a></li>
+                <li><a href="{% url 'time_page' %}">Time Periods</a></li>
+                <li><a href="{% url 'events_page' %}">Events</a></li>
+                <li><a href="{% url 'miscellaneous_page' %}">Miscellaneous</a></li>
+                <li><a href="{% url 'jokes_page' %}">Bible 8 Jokes</a></li>
+                <li><a href="{% url 'about_page' %}">About</a></li>
+            </ul>
+        </nav>
+
+        <div class="body">
+            <div class="patrick">
+                <img src="{% static 'patrick.jpeg' %}" class="img" alt="Patrick">
+                <iframe width="990" height="557" class="patrick_vid" src="https://www.youtube.com/embed/KQLfgaUoQCw" title="St. Patrick&#39;s Bad Analogies" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="sparky">
+            <img src="{% static 'sparky.jpeg' %}" class="img" alt="Sparky">
+            <label class="sparky_sadge">This content is not suitable for all ages and was thus deleted.</label>
+        </div>
+
+        <div class="express">
+            <img src="{% static 'express.png' %}" class="img" alt="Express Yourself Wall">
+            <label class="express_l">This is a wall where you can express yourself (pretty self-explanatory). I don't know what else to put here :).</label>
+        </div>
+
+        <div class="duck">
+            <img src="{% static 'IMG_5089.JPG' %}" class="img" alt="Duck">
+            <label class="duck_l">Duck...</label>
+            <iframe width="990" height="557" class="duck_vid" src="https://www.youtube.com/embed/3flILVgNIi0" title="DUCK SOUNDS FOR KIDS - Quacking Sounds of Ducks, Duck Sound Effects and Calls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="procrastination">
+            <img src="{% static 'procrastination.jpg' %}" class="img" alt="Procrastination">
+            <label class="procrastination_l">Send Help Soon...</label>
+            <video width="640" height="360" controls  class="procrastination_vid">
+                <source src="static/procrastination.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+        </div>
+
+        <div class="squiddanth">
+            <img src="{% static 'squiddanth.jpg' %}" class="calamari" alt="Squiddanth">
+            <label class="squiddanth_l">Actual Picture of Squiddanth after the Writing Proficiency </label>
+        </div>
+
+        <div class="rick_astley">
+            <label class="rick_roll">Have fun :)</label>
+            <video width="640" height="360" controls  class="THE_VID">
+                <source src="static/rickroll.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+        </div>
+
+
+
+    </body>
+</html>

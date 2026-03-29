@@ -4,7 +4,7 @@ from django.template import loader
 
 
 def home(request):
-    template = loader.get_template("home.html")
+    template = loader.get_template("index.html")
     return HttpResponse(template.render())
 
 def peoples(request):

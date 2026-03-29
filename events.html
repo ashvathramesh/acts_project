@@ -1,0 +1,950 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .title_div{
+                position:absolute;
+                width:1450px;
+                height:200px;
+                background-color:rgb(0, 115, 176);
+                margin-left:-10px;
+                margin-top:-10px;
+            }
+
+            .events_title{
+                position:absolute;
+                width:1000px;
+                height:100px;
+                font-size:100px;
+                margin-left:550px;
+                margin-top:30px;
+            }
+            
+            .navbar {
+                position: fixed; 
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 35px;
+                background-color: rgb(40, 40, 55);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 50px;
+                z-index: 1000;
+                border-bottom: 2px solid rgb(96, 96, 114);
+            }
+
+            .nav-logo-link {
+                text-decoration: none; 
+                color:white;
+                font-family:fantasy;
+                font-size:30px;
+            }
+
+            .nav-logo:hover {
+                cursor: pointer;       
+                opacity: 0.8; 
+                color:turquoise;         
+            }
+
+            .nav-links {
+                display: flex;
+                list-style: none;
+                margin-right:70px;
+            }
+
+            .nav-links li {
+                margin-left: 30px;
+            }
+
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-family: sans-serif;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            .nav-links a:hover {
+                color: #ffd700; 
+            }
+
+            .body{
+                position:absolute;
+                width:1450px;
+                height:17500px;
+                margin-top:120px;
+                background-color:lightblue;
+                margin-left:-10px;
+            }
+
+            .img{
+                position:absolute;
+                width:200px;
+                height:200px;
+                margin-left:20px;
+                margin-top:-10px;
+            }
+
+            .label{
+                position:absolute;
+                margin-left:250px;
+                margin-right:20px;
+                font-family:fantasy;
+            }
+
+            .ascension {
+                position: absolute;
+                margin-top: 30px;
+                width: 1440px;
+            }
+
+            .ananias_sapphira {
+                position: absolute;
+                margin-top: 580px;
+                width: 1440px;
+            }
+
+            .philip_samaria {
+                position: absolute;
+                margin-top: 1130px;
+                width: 1440px;
+            }
+
+            .selection_matthias {
+                position: absolute;
+                margin-top: 1680px;
+                width: 1440px;
+            }
+
+            .apostles_freed {
+                position: absolute;
+                margin-top: 2230px;
+                width: 1440px;
+            }
+
+            .ethiopian_eunuch {
+                position: absolute;
+                margin-top: 2780px;
+                width: 1440px;
+            }
+
+            .pentecost {
+                position: absolute;
+                margin-top: 3330px;
+                width: 1440px;
+            }
+
+            .choosing_seven {
+                position: absolute;
+                margin-top: 3880px;
+                width: 1440px;
+            }
+
+            .saul_conversion {
+                position: absolute;
+                margin-top: 4430px;
+                width: 1440px;
+            }
+
+            .peter_sermon {
+                position: absolute;
+                margin-top: 4980px;
+                width: 1440px;
+            }
+
+            .stephen_sermon {
+                position: absolute;
+                margin-top: 5530px;
+                width: 1440px;
+            }
+
+            .saul_sight {
+                position: absolute;
+                margin-top: 6080px;
+                width: 1440px;
+            }
+
+            .healing_lame {
+                position: absolute;
+                margin-top: 6630px;
+                width: 1440px;
+            }
+
+            .stoning_stephen {
+                position: absolute;
+                margin-top: 7180px;
+                width: 1440px;
+            }
+
+            .peter_aeneas {
+                position: absolute;
+                margin-top: 7730px;
+                width: 1440px;
+            }
+
+            .arrest_peter_john {
+                position: absolute;
+                margin-top: 8280px;
+                width: 1440px;
+            }
+
+            .saul_persecution {
+                position: absolute;
+                margin-top: 8830px;
+                width: 1440px;
+            }
+
+            .peter_tabitha {
+                position: absolute;
+                margin-top: 9380px;
+                width: 1440px;
+            }
+
+            .peter_vision {
+                position: absolute;
+                margin-top: 9930px;
+                width: 1440px;
+            }
+
+            .paul_journey_rome {
+                position: absolute;
+                margin-top: 10480px;
+                width: 1440px;
+            }
+
+            .cornelius_converted {
+                position: absolute;
+                margin-top: 11030px;
+                width: 1440px;
+            }
+
+            .paul_first_journey {
+                position: absolute;
+                margin-top: 11680px;
+                width: 1440px;
+            }
+
+            .paul_second_journey {
+                position: absolute;
+                margin-top: 12580px;
+                width: 1440px;
+            }
+
+            .paul_third_journey {
+                position: absolute;
+                margin-top: 13380px;
+                width: 1440px;
+            }
+
+            .paul_prison_philippi {
+                position: absolute;
+                margin-top: 14130px;
+                width: 1440px;
+            }
+
+            .herod_worms {
+                position: absolute;
+                margin-top: 14730px;
+                width: 1440px;
+            }
+
+            .paul_athens {
+                position: absolute;
+                margin-top: 15280px;
+                width: 1440px;
+            }
+
+            .peter_escape {
+                position: absolute;
+                margin-top: 15830px;
+                width: 1440px;
+            }
+
+            .paul_house_arrest {
+                position: absolute;
+                margin-top: 16480px;
+                width: 1440px;
+            }
+
+
+            .paul_execution {
+                position: absolute;
+                margin-top: 17030px;
+                width: 1440px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="title_div">
+            <label class="events_title">Events</label>
+        </div>
+
+        <nav class="navbar">
+            <a href="{% url 'home' %}" class="nav-logo-link">
+                <div class="nav-logo">Acts Project</div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="{% url 'people_page' %}">People/People Groups</a></li>
+                <li><a href="{% url 'places_page' %}">Places</a></li>
+                <li><a href="{% url 'time_page' %}">Time Periods</a></li>
+                <li><a href="{% url 'events_page' %}">Events</a></li>
+                <li><a href="{% url 'miscellaneous_page' %}">Miscellaneous</a></li>
+                <li><a href="{% url 'jokes_page' %}">Bible 8 Jokes</a></li>
+                <li><a href="{% url 'about_page' %}">About</a></li>
+            </ul>
+        </nav>
+
+        <div class="body">
+            <div class="ascension">
+                <form>
+                    <img src="{% static 'ascension.jpeg' %}" class="img" alt="Ascension Image">
+                    <label class="label">
+                        <b>Ascension (Acts 1:1-11)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        It was forty days after Jesus had risen from the dead. He told his disciples to head to Jerusalem and wait for a gift from God. He said that just as followers of Christ are baptized in water, they would be baptized in the Holy Spirit. Then, right before their eyes, Jesus was taken up to heaven. The disciples were astonished and stayed staring at the sky for a while. And eventually two angels came down and asked them "Men of Galilee, why do you stand here looking into the sky? This same Jesus, who has been taken from you into heaven, will come back in the same way you have seen him go into heaven."
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        For starters, this is when Jesus goes up to heaven again. But the angels that come down and talk to the disciples also foreshadow that he will return to earth one day. And what Jesus said about being baptized in the Holy Spirit will come true (see tongues of fire section).
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        Jesus will return to Earth one day and we have to be ready for that. This event also symbolizes how God always keeps his word. The promise that Jesus gives the disciples comes true in the next chapter of Acts.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="ananias_sapphira">
+                <form>
+                    <img src="{% static 'sapphira.jpg' %}" class="img" alt="Ananias and Sapphira Image">
+                    <label class="label">
+                        <b>Ananias and Sapphira die (Acts 5:1-11)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        During Acts chapter 5, a man named Ananias and his wife Sapphira sold a piece of property to the church, but kept some of the money for himself. Peter confronted Ananias and told him by keeping money for himself he had lied against the church and holy spirit. At that moment Ananias fell down and died. Shortly afterwards, his wife Sapphira was also confronted by Peter. She had known her husband had secretly kept money for them instead of the church. And she too, fell down and died.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        God was setting an important standard for the early church. They need to truly fear God and be courageous instead of pretending to do either.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        First off, you can't lie to God. He knows what you did, are doing, and will do. But another lesson from this passage is that you need to give yourself a healthy fear of the Lord. You'll make decisions based on what you fear the most.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="philip_samaria">
+                <form>
+                    <img src="{% static 'philip_samaria.jpeg' %}" class="img" alt="Philip in Samaria Image">
+                    <label class="label">
+                        <b>Philip in Samaria (Acts 8:4-8)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Philip went to Samaria in order to preach the gospel there. He healed the sick and lame. Philip also cast evil spirits out from people. Because of these signs, many people came to believe.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        This was one of the many missionary trips the disciples took in order to spread the news of the resurrection.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        The disciples began to spread the news to all people. Even the Samaritans, the Jews sworn enemies. They knew that God's offer was for all people, not just Jews (see the section on Peter's vision of animals). Now we can remember the same when thinking of other people different from us.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="selection_matthias">
+                <form>
+                    <img src="{% static 'matthias.jpg' %}" class="img" alt="Selection of Matthias Image">
+                    <label class="label">
+                        <b>The Selection of Matthias (Acts 1:12-26)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        The disciples decided to recruit someone to replace Judah. Who they later learned died. The candidates were Barsabbas and Matthias. Knowing God would know who to choose. They cast lots and decided on Matthias.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        A new disciple was added to the group in order to help spread the good news of Jesus.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        There's not a ton of applications for this event, but I can think of one. The disciples knew that God knows a person's heart. So they trusted God to choose the replacement for Judah. When we need wisdom, we can pray to God as well.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="apostles_freed">
+                <form>
+                    <img src="{% static 'apostles_freed.jpg' %}" class="img" alt="Apostles Freed from Prison Image">
+                    <label class="label">
+                        <b>Apostles Freed from Prison (Acts 5:17-26)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Peter and the other apostles thrown in jail by the Pharisees and religious leaders. But during the night an angel sent by God freed the apostles and opened the prison doors (for more information go to the section on prison doors). And later in the day the Pharisees found the people they had thrown in prison, preaching the gospel in the temple courts.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        God was once again demonstrating how you can't stop his ministry. And as you go through the book of acts you'll find this isn't the first time he rescues people from prison.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        God always finds a way to help. All we need to do is trust him and pray. He's always there, always listening to prayer. (For a better example of this application, head to the section on Peter's escape from prison).
+                    </label>
+                </form>
+            </div>
+            
+            <div class="ethiopian_eunuch">
+                <form>
+                    <img src="{% static 'ethiopia_eunuch.jpeg' %}" class="img" alt="Ethiopian Eunuch Baptized Image">
+                    <label class="label">
+                        <b>Ethiopian Eunuch Baptized (Acts 8:26-39)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Philip felt an angel telling him to head south to Ethiopia. Philip obeyed and met an Ethiopian Eunuch. He was baptized by Philip, and converted to a Christian.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        The disciples are once again spreading news for the resurrection to the rest of the world. And the Eunuch in the story may have been the first Ethiopian to be officially baptized.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        Like I'm gonna say for lots of events with gentiles, we need to remember that everyone is welcome in God's kingdom. But this story also teaches us to trust in God's plan, Philip had no idea what God was sending him to Samaria for, but he still obeyed and went. That took some serious faith.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="pentecost">
+                <form>
+                    <img src="{% static 'pentecost.jpeg' %}" class="img" alt="Pentecost Image">
+                    <label class="label">
+                        <b>Pentecost (Acts 2:1-41)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        The disciples were all in one room on the day of Pentecost. Then, suddenly, what looked like touches of fire came down and rested over the disciple's heads. They then suddenly began talking in foreign languages. Then they went out of the room and started approaching the crowd, and each person heard the disciples speaking in their own language. Most were amazed, but some made fun of them and said "They've had too much wine!". Peter then stepped up and addressed the crowd with a speech. And he inspired many people to believe.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        This was the promise Jesus had told his disciples. On the day of Pentecost, he would send a gift from God to help the disciples preach the Gospel. This was also another sign on how God was preparing to spread the message of Jesus to the Gentiles.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        God keeps his promises and he will always show up when we need him. It might not be in the way we expect, or at the time we expect, but he always hears our prayers.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="choosing_seven">
+                <form>
+                    <img src="{% static 'choosing_seven.jpeg' %}" class="img" alt="Choosing of the Seven Image">
+                    <label class="label">
+                        <b>Choosing of the Seven (Acts 6:1-7)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Hellenistic Jews were complaining about how their houses were being overlooked during the daily distribution of food by the church. So the disciples decided to appoint seven righteous men to oversee the job of distributing food. Stephen, Philip, Procorus, Nicanor, Timon, Parmenas, and Nicolas were all chosen and converted to Judaism.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        The church was growing in number and the disciples had to do more work to keep the church running smoothly.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        The disciples knew not to leave the Hellenistic Jews out of the church's practices. God's kingdom has a place for everyone who believes.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="saul_conversion">
+                <form>
+                    <img src="{% static 'saul_convert.jpeg' %}" class="img" alt="Saul's Conversion Image">
+                    <label class="label">
+                        <b>Saul's Conversion (Acts 9:1-31)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Saul, who was probably one the most guilty people for persecuting christians, was on the road to Damascus. He was going there to, you guessed it, persecute christians. But on the way there, Jesus Christ himself suddenly appeared to Saul. There was also a flash of light from heaven that blinded Saul. Jesus asked him "Saul, why are you persecuting me?". After that, Saul remained blind for three days straight until God sent a disciple named Ananias to help Saul regain sight again. Then, Saul, filled with the holy spirit, began preaching to the people in Damascus and amazed everyone. (For more context on Saul getting his sight back, go to the section labeled Saul regains sight)
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        Saul was a major leader in the persecution of Christians, so now that he himself was a Christian, it was a major blow to the Pharisees's plan to eliminate the ministry of Jesus. Saul would go on to travel across the world, preaching the gospel to gentiles and establishing at least 14 different churches. This was the start of his great missionary work to spread the news of God.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        I feel like the main application for this one is more about Ananias than Saul. Ananias was probably scared to go see Saul, let alone help him. But he trusted God's plan and went to help someone who could potentially have him killed or imprisoned.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="peter_sermon">
+                <form>
+                    <img src="{% static 'peter_sermon.jpg' %}" class="img" alt="Peter's Sermon Image">
+                    <label class="label">
+                        <b>Peter's Sermon (Acts 2:14-41)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        It was just after Pentecost and the arrival of the holy spirit that Peter's Sermon happened. He and the other disciples rushed to the room they were staying in and began to preach in foreign tongues (A.K.A other languages). Most of the people were amazed. They said "These men are Galileans, yet we all hear them speaking in our native language.". This is when Peter began his sermon.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        This was the first of the disciple's many sermons. And it also symbolized how God was preparing to send his message to the gentiles. Because during Genesis 11 (the story of the Tower of Babel), God gave everyone different languages so they couldn't be unified. But here God is preparing to unify the people for when Jesus comes again.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        (The following are things that Peter preached in his sermon.)
+                        <br><br>
+                        Jesus died for us and our sins.
+                        <br><br>
+                        When we repent and are baptized, we receive the gift of the Holy Spirit.
+                        <br><br>
+                        We receive forgiveness for our sins when we devote our life to Jesus.
+                        <br><br>
+                        The promise of the Holy Spirit is for everyone, now and in the future.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="stephen_sermon">
+                <form>
+                    <img src="{% static 'stephen_sermon.jpg' %}" class="img" alt="Stephen's Sermon Image">
+                    <label class="label">
+                        <b>Stephen's Sermon (Acts 7:1-53)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Stephen was brought before the religious leaders and accused of crimes against God. This happened because people who wanted to get Stephen in trouble, lied to the religious leaders about him. In response Stephen stood up in the court and delivered the longest speech in the book of Acts. It covered everything in the time period between Abraham and Solomon. It also accused the religious leaders of resisting the holy spirit. Stephen said that they had received the law, but not obeyed it.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        What Stephen was saying was true, and still is today. It accused the religious leaders of not following the word of God and instead resisting it.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        We need to obey God's word and not resist it like the religious leaders. During his sermon, Stephen said that the Pharisees were no different from their ancestors. And if you read the bible you'll see its true. Those who refuse to accept God's word were eventually humbled by God.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="saul_sight">
+                <form>
+                    <img src="{% static 'saul_sight.jpeg' %}" class="img" alt="Saul Regains Sight Image">
+                    <label class="label">
+                        <b>Saul Regains Sight (Acts 9:7-19)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Ananias went to the house where Saul was staying, and he then placed his hand on Saul saying that God had sent him to give Saul his sight back. Then something like scales fell from Saul's eyes. And when Saul opened his eyes he could see again.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        This was an important part of Saul's conversion which was an important event in its own right (See the section on Saul's conversion).
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        Ananias used God's spiritual gift of healing to heal Paul. God gave us all spiritual gifts and it's our duty to use them to bring glory to him. It also took Ananias a lot of courage to go see Saul and help him. But he trusted God and his plan.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="healing_lame">
+                <form>
+                    <img src="{% static 'healing_lame.jpeg' %}" class="img" alt="Healing of the Lame Man Image">
+                    <label class="label">
+                        <b>Healing of the Lame Man (Acts 3:1-10)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Peter and John were at the temple during the time of prayer. They saw a man who was lame from birth staying on the temple gate. He did this all the time to ask for money. Peter told him "We don't have silver or gold, but we do have something else to offer. In the name of Jesus Christ of Nazareth, get up and walk!". They helped the man up and he soon realized he could walk. He walked and jumped around the temple courts, praising God. When other people saw this they were shocked and Peter went to address the onlookers.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        This event caused many people to believe in Jesus and also marked one of the first miracles after the Ascension of Jesus. It was also the second sermon of Peter (Pentecost was the first.), because Peter did preach to the audience after he healed the man.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        This was another example of using your spiritual gifts to bring glory to God. And it also shows how God uses miracles to change people's lives. This man was crippled from birth, but once he met Peter and John, his life changed forever. (This is almost the same as the What it means to us section for the healing of Aeneas. That's because they both have extremely similar takeaways. In my opinion.)
+                    </label>
+                </form>
+            </div>
+            
+            <div class="stoning_stephen">
+                <form>
+                    <img src="{% static 'stephen_stoned.jpg' %}" class="img" alt="The Stoning of Stephen Image">
+                    <label class="label">
+                        <b>The Stoning of Stephen (Acts 7:54-60)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        After Stephen gave his sermon (See the section on Stephen's sermon), the religious leaders were filled with rage. They dragged him out of the city and began to stone him. A young man named Saul saw this and offered to hold the coats of the people stoning Stephen. He thought they could throw stones better if they weren't being held down by a heavy coat. Meanwhile, Stephen said to the Lord, "God, forgive them.". As he said this, he fell asleep (he died).
+                        <br><br>
+                        <b>Why it was important / What it means to us:</b>
+                        <br><br>
+                        While the story may seem tragic, it sets an example for Christians back then and even in the present (just in a different way). Stephen spent his last moments praying for his enemies, which is just what Jesus did on the cross. It might be hard to love our enemies, but we need to remember that God loves them just as much as us.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="peter_aeneas">
+                <form>
+                    <img src="{% static 'peter_aeneas.jpg' %}" class="img" alt="Peter Heals Aeneas Image">
+                    <label class="label">
+                        <b>Peter Heals Aeneas (Acts 9:32-35)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Peter was in the city of Lydda, when he saw a man named Aeneas. Aeneas had been paralyzed for eight years, but Peter was about to change that. "Aeneas," Peter said to him, "Jesus Christ heals you. Get up and roll up your mat." Immediately, Aeneas got up and could stand. All those who saw it were amazed and believed in God from that moment on.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        This was another miracle that brought many people to Christ. And it was yet another miraculous healing that God performed.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        This was another example of using your spiritual gifts to bring glory to God. And it also shows how God uses miracles to change people's lives. Aeneas had been paralyzed for eight years, but once he met Peter, his life changed forever. (This is almost the same as the What it means to us section for the healing of the lame man. That's because they both have extremely similar takeaways. In my opinion.)
+                    </label>
+                </form>
+            </div>
+            
+            <div class="arrest_peter_john">
+                <form>
+                    <img src="{% static 'peter_john_arrest.jpg' %}" class="img" alt="The Arrest of Peter and John Image">
+                    <label class="label">
+                        <b>The Arrest of Peter and John (Acts 4:1-4)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Peter and John had just healed a crippled man (see the section of the healing of the lame man), at the temple. They began to speak to the audience on how Jesus rose from the dead. This angered the Pharisees (They pretty much got angry whenever people spoke about Jesus's teachings.), so Peter and John were arrested and put in jail until the next day.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        This was the first sign of threats that would try to stop Christianity from spreading. The religious leaders, Roman Empire, and even other Jews would all be major obstacles for the church during the book of acts.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        For me, the application on this one is not during the arrest, but after it. Peter and John were brought before the Sanhedrin and questioned. But Peter, filled with the Holy Spirit, responded courageously and asked the religious leaders why they were being called to account for an act of kindness to a man. We can apply this to our lives and not be afraid to speak out against the crowd when we know what God wants us to do.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="saul_persecution">
+                <form>
+                    <img src="{% static 'saul_persecute.jpg' %}" class="img" alt="Saul's Persecution Image">
+                    <label class="label">
+                        <b>Saul's Persecution (Acts 8:1-3)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        After the stoning of Stephen, the church was persecuted and scattered. And Saul (one of the leaders in the persecution of Christians) started to hunt Christians down. He arrested both men and women who believed in Jesus, and sent them to prison. He could have been a major threat to Christianity's spread. But instead, God had a plan for him to do just the opposite… (See the section on Saul's conversion)
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        This is when the church was scattered, and its members would face a long time of persecution. Unfortunately for Christians, this was just the beginning.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        Paul later tells us that he regretted his persecution of Christians. He said he wasn't worthy to be a disciple of God, but by God's grace he is. We can apply this to our lives by remembering that God forgives us our sins when we repent to him.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="peter_tabitha">
+                <form>
+                    <img src="{% static 'peter_tabitha.jpeg' %}" class="img" alt="Peter Raises Tabitha Image">
+                    <label class="label">
+                        <b>Peter Raises Tabitha (Acts 9:36-43)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Peter was in the city of Lydda, and was healing many people, including a man named Aeneas, who had been paralyzed. Recently, before Peter arrived, a Christian named Tabitha, who was very loved by the city for helping the poor, had passed away. She had lived in the city of Joppa, which wasn't too far away from Lydda. So the disciples heard Peter was there, they sent two men to look for him. The men found Peter and took him to the house where Tabitha's body was. Peter went upstairs to it, and told everyone to get out of the room. Then he prayed to God and said "Tabitha, get up". Suddenly she got up and Peter presented her to the other believers. Everyone was amazed, and Peter stayed in Joppa for a while.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        This situation is very similar to when Jesus healed Jairus's daughter. And both were miracles that made many people believe in Christ that day.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        I personally think that the story proves that anything is possible with God's help. Because as far as I know, this was the first resurrection miracle since Jesus rose from the dead.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="peter_vision">
+                <form>
+                    <img src="{% static 'peter_animal.jpeg' %}" class="img" alt="Peter's Vision of Animals Image">
+                    <label class="label">
+                        <b>Peter's Vision of Animals (Acts 10:9-23)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Peter was staying in the house of a man named Simon, who lived by the sea. Later in the day, Peter went on the housetop to pray. He was hungry and soon fell into a trance. He saw heaven open and a giant sheet filled with all sorts of animals that the Jews regarded as unclean. A voice called to him saying "Peter, kill and eat". Peter said "Of course not! I've never eaten anything unclean.". But the voice replied "Do not declare anything unclean that the Lord has made clean.". This happened three times.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        God is preparing to send his word to the gentiles. In the past, God's commandments were only for the Jews. But now God is saying that he's starting something new.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        Everyone is welcome in God's kingdom. There might have been a time where God's word was only for the Jews. But now it's for everyone, including those that we think don't deserve it.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="paul_journey_rome">
+                <form>
+                    <img src="{% static 'paul_rome.jpeg' %}" class="img" alt="Paul's Journey to Rome Image">
+                    <label class="label">
+                        <b>Paul's Journey to Rome (Acts 27:1-28:15)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Paul was a prisoner and was being transferred with some other prisoners to Rome. They were escorted onto a ship which soon set sail. It wasn't long before Paul warned the centurion on the ship that they would soon sail onto a storm. But the man ignored him and took the advice of the pilot and owner of the ship to continue the trip. But what Paul said came true, and the ship sailed straight into a storm. They lost many supplies of food and other things. Eventually Paul told the people on the ship that they should have listened to him. He said that God had told him that he will graciously save all the lives on the ship and that they will reach land soon. And like the storm, what Paul said came true, the crew found an island and quickly set anchor there. The guards, fearing the prisoners would escape, thought to kill them. But the centurion wanted to spare Paul's life and kept them from killing the prisoners.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        This story connects to the snake on Malta one (see the section on it). And because of Paul's acts on the ship, he was allowed to live when he reached Rome.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        God works through people even when we don't see it at first. He worked through Paul to keep the people on the boat safe, and also the centurion to keep Paul safe. I also think it was about trusting God. The people on the ship didn't trust Paul at first. It took their lives being put to risk for them to finally listen to him.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="cornelius_converted">
+                <form>
+                    <img src="{% static 'cornelius_convert.jpeg' %}" class="img" alt="Cornelius Converted Image">
+                    <label class="label">
+                        <b>Cornelius Converted (Acts 10:24-48)</b>
+                        <br><br>
+                        Disclaimer: Technically, Cornelius was already a Christian at the time of this event, but this is when he was officially baptized.
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        At the time of Cornelius's daily prayer an angel told him where Peter was staying and asked him to send his men to get him. The men brought Peter back to Cornelius, who had gathered all of his relatives and close friends. Peter said to them that they were well aware that he was not supposed to be teaching them, as they were Gentiles. But he also said that God had recently shown him that what was once unclean has now been made clean. After hearing this, Cornelius told Peter what the angel had said to him, and with that, Peter began to speak. After Peter's sermon, the Holy Spirit came down to everyone who heard it. They all began to praise God, including Cornelius, who was baptized that day.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        God was showing Peter how he was preparing to send his message to the Gentiles starting with Cornelius, his relatives, and his family. But this would also raise some criticisms among the Jews leading Peter to explain what happened in his vision (see the section on Peter's vision of animals).
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        I know I've already used the application, God's kingdom is for everyone, multiple times, but I feel like that's the main message of what God's trying to show us. Peter even says to the people receiving his message "I now realize how true it is that God does not show favoritism, but accepts from every nation the one who fears him and does what is right."
+                    </label>
+                </form>
+            </div>
+            
+            <div class="paul_third_journey">
+                <form>
+                    <img src="{% static 'mission_3.jpeg' %}" class="img" alt="Paul's 3rd Missionary Journey Image">
+                    <label class="label">
+                        <b>Paul's 3rd Missionary Journey (Acts 18:22–21:17)</b>
+                        <br><br>
+                        Disclaimer: I'm pretty sure there are even more things in Paul's third missionary journey that I'm not covering, but I think I got to most parts of it.
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Paul spent time at the church of Syrian Antioch. He later begins to head northwest to visit churches he established during his first missionary journey. These were the churches in Derbe, Lystra, Iconium, and Pisidian Antioch. Paul arrives in the city of Ephesus, where he teaches the full gospel to people. While he converted a ton of people to Christ in Ephesus, some rejected his teachings. After spending three months in Ephesus, Paul and the Christians of the city moved to a school owned by a man named Tyrannus. There Paul preached to Jews and Greeks for two years. Unfortunately for him, a riot started against Paul before he was going to leave the city. However, Paul successfully left the city and journeyed to Philippi, Thessalonica, and Berea to encourage the churches that had been set up there. Afterward, he stayed in the Greek city of Achaia for three months. Paul later stayed in Troas and did many miracles such as raising a person named Eutychus from the dead. After leaving the city Paul and his men traveled to Mitylene, Trogyllium, and Miletus. Paul eventually went to Tyre in Syria. The disciples there begged him not to go to Jerusalem. They were concerned for Paul's safety. But Paul desperately wanted to finish his missionary trip and traveled there. Finally, Paul and his men arrived in Jerusalem where a man named Mnason let them stay at his house.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        Paul visited and encouraged many of the churches that he or other disciples set up. There were also several new churches that were established. Places such as Greece heard about the Gospel for the first time. Tons of people were converted to Christianity.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        Sometimes we need to put aside our fears to follow God's calling. Paul did this when he decided to go to Jerusalem despite how dangerous it was. We can also give people encouragement and advice, just like Paul did with many of the churches he set up.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="paul_first_journey">
+                <form>
+                    <img src="{% static 'mission_1.jpeg' %}" class="img" alt="Paul's First Missionary Journey Image">
+                    <label class="label">
+                        <b>Paul's First Missionary Journey (Acts 13-14)</b>
+                        <br><br>
+                        Disclaimer: I'm pretty sure there are even more things in Paul's first missionary journey that I'm not covering, but I think I got to most parts of it.
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Paul, Barnabus, and John Mark begin the journey. The trio sails to Salamis on the island of Cyprus. There they converted many, including the island's Roman proconsul, Sergius Paulus. For reasons the Bible doesn't mention, John Mark leaves Paul and Barnabus to head back to Jerusalem. The duo heads up north to Pisidian Antioch to preach on the Sabbath. During his sermon, Paul gave a synopsis of the Israelites' exile in Egypt, the judges, Kings Saul and David, and John the Baptist. He also taught the people of Antioch how Jesus rose from the dead and fulfilled all of the prophecies about the messiah. Because many people believed in Christ that day, Paul and Barnabus returned on the next Sabbath to preach again. The gospel spreads through the whole region and yet many missionaries are persecuted. Paul and Barnabus leave for the city of Iconium where they preach boldly and perform many miracles. Rumors of plots to kill them send the duo to Lystra. In the city of Lystra, Paul notices a lame man listening to their sermon. He heals him and the amazed crowd concludes that they must be the gods Zeus and Hermes. But Paul and Barnabus deny this and tell the crowd about the one true God. Unfortunately, unbelieving Jews arrived and stirred the crowd against the Gospel. They began to stone Paul and dragged him out of the city. They thought he was dead, but later when the disciples surrounded his body, Paul stood up, totally fine, and walked back to the city. After what happened in Lystra Paul and Barnabus leave for Derbe. There they convert many to God. Afterward they traveled back to Lystra, Iconium, and Pisidian Antioch to strengthen the young churches they had established there. They also appointed elders to those churches. Next, the duo went to the city of Perga and preached there. After which they went to Attalia and did the same. Finally, they returned to Syrian Antioch and reported to the church how God had opened a door of faith to the Gentiles through them and talked about everything that had happened.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        Many new churches were established by Paul and Barnabus. Several churches that were made were also revisited and strengthened. Thousands of Christians believed in Christ because of this.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        When Paul and Barnabus rejected the praise as gods in Lystra, they were not only acknowledging that God was Lord. But also being humble, something that we should always do. Pride destroys all things, but true humility is what God looks for in a person's heart. Paul and Barnabus helped strengthen churches that they had set up in various cities. Cities that had many unbelievers and obstacles for the church. Similarly, we can strengthen people with kind words or sometimes just with our presence when they're going through a hard time.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="paul_prison_philippi">
+                <form>
+                    <img src="{% static 'paul_prisoned.jpg' %}" class="img" alt="Paul Put in Prison in Philippi Image">
+                    <label class="label">
+                        <b>Paul Put in Prison in Philippi (Acts 16:16-40)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Paul and Silas had been arrested in Philippi for bringing a spirit out of a female slave (Seems like an odd thing to be arrested for). They were thrown in prison and guarded carefully. At about midnight, Paul and Silas were up, praying and singing hymns. At that moment, a violent earthquake shook the jail, opened the prison doors, and made the chains of all the prisoners fall off. When the jailer awoke, he realized that the prisoners had escaped. He was about to kill himself when Paul and Silas came to him and announced that they were still here. The jailer immediately fell before them, trembling. He asked "Sirs, what must I do to be saved.". They replied "Believe in Jesus and you and your household will be saved.". Afterward, the jailer washed their wounds and he and his household were baptized. He even invited Paul and Silas to stay at his house and served them a meal.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        God delivered Paul and Silas from prison and worked through them to bring the jailer and his household to faith.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        It took some serious faith to be praising God in prison. We can apply this to our lives by always remembering that God never forsakes us, he will never abandon us. And in turn, we should make sure that we never lose faith in God even in the darkest or most hopeless times. He will always make a way for us.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="herod_worms">
+                <form>
+                    <img src="{% static 'herod_death.jpeg' %}" class="img" alt="Herod is Eaten by Worms Image">
+                    <label class="label">
+                        <b>Herod is Eaten by Worms (Acts 12:20-24)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Herod was in the cities of Tyre and Sidon. He had been giving them their food supply and now they wanted an audience with him. So Herod, wearing his royal robes, spoke to the crowd. The people heard and said "This is the voice of a god.". Herod could have denied this, but he didn't and accepted the praise. At that moment, an angel of the Lord struck Herod down and he was eaten by worms.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        Well, first off, the king died. I think that's a pretty big deal. Plus, it also sent a warning not to be so proud that you claim you're a god.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        God mocks a proud mocker. He despises pride. Jesus himself could have been born as a warrior or king, but instead chose to be a humble child. Jesus could have saved himself from the cross, but instead chose to die a awful, humiliating death to save us. We can apply all this to our lives by being humble. All pride does is destroy all things. But humility is what God truly looks for in a person's heart. (Animal note: The worms that ate Herod were most likely tapeworms. Tapeworms are a type of parasite that lives inside you if you eat infected raw meat)
+                    </label>
+                </form>
+            </div>
+            
+            <div class="paul_athens">
+                <form>
+                    <img src="{% static 'paul_athens.jpeg' %}" class="img" alt="Paul in Athens Image">
+                    <label class="label">
+                        <b>Paul in Athens (Acts 17:16-34)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Paul came to the city of Athens and was greatly distressed to see the city full of idols. He addresses the crowd and tells them that they are ignorant in what they worship. Paul even saw an altar with the inscription TO AN UNKNOWN GOD. He proceeded to preach God's creation and Jesus's story to the Athenians. Some heard his story and sneered, but others believed and became disciples of Paul.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        More people were converted to God, and the message of the gospel is reaching new places. And soon Athens wouldn't be the only place in Greece to receive the gospels.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        Don't worship idols. We might not still believe in Zeus or Hermes or any of the other false gods from back in Paul's time, but we do have things that we might value greater than God. Money, fame, belongings, none of those things can bring you to heaven. The only way is through Jesus and the holy spirit.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="peter_escape">
+                <form>
+                    <img src="{% static 'peter_escape.jpg' %}" class="img" alt="Peter Escapes Prison Image">
+                    <label class="label">
+                        <b>Peter Escapes Prison (Acts 12:1-19)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Peter was arrested by Herod along with many other members of the church. James, the brother of John, had already been put to death. And Herod intended to put Peter, who had been thrown in jail, on public trial the next day. But even while Peter was imprisoned, the church kept praying for him. Eventually, he was visited by an angel in the middle of the night. The chains fell off Peter's wrists and the angel said to put on his sandals and cloak. Then Peter followed the angel out of the prison and passed the guards. But Peter had no idea it was really happening, he thought it was a dream. But after he realized it happened, Peter went to the house where all the believers were staying and knocked on the door. At first the people inside didn't think it was him. But after several knocks they opened the door to find Peter waiting for them. In the morning, Herod ordered the guards by Peter's cell to be executed for not preventing his escape.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        Peter was saved from certain death. If he wasn't, then the "rock" of the church would have just been killed and it would be an intense struggle for the early church.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        The church was continually praying for Peter even when they probably didn't know what would happen. But regardless, this demonstrates how God always hears our prayers. He will always make a way even when things seem hopeless. God might not respond in the way or time we expect, but he still hears our prayers and responds to them.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="paul_house_arrest">
+                <form>
+                    <img src="{% static 'paul_arrest.jpeg' %}" class="img" alt="Paul's House Arrest Image">
+                    <label class="label">
+                        <b>Paul's House Arrest (Acts 28:16-31)</b>
+                        <br><br>
+                        Disclaimer: So the verses mentioned above don't actually directly state that Paul was in house arrest. But due to biblical and historical evidence we have reason to believe that it was during these verses.
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Paul arrived in Rome (see the sections of the snake on Malta and Paul's journey to Rome), but the Roman leaders allowed him to continue preaching under Roman guard. Paul rented a house in the city and stayed there for two years. While he was under house arrest, Paul welcomed anyone who came to visit him and shared the gospel to many people.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        This was the conclusion of Paul's third missionary journey. It also would help many people be converted to Christ.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        Paul preached boldly to the people of Rome even though he knew it could get him killed. Sometimes Jesus calls us to take very brave actions, but God will reward you. If you're faithful and trust in him.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="paul_second_journey">
+                <form>
+                    <img src="{% static 'mission_2.png' %}" class="img" alt="Paul's Second Missionary Journey Image">
+                    <label class="label">
+                        <b>Paul's Second Missionary Journey (Acts 15:36-18:22)</b>
+                        <br><br>
+                        Disclaimer: I'm pretty sure there are even more things in Paul's second missionary journey that I'm not covering, but I think I got to most parts of it.
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        Paul and Barnabus plan a second missionary journey. Their goal was to return to the cities and churches of Asia Minor that they had previously gone to on their first missionary journey. Barnabus wanted to take his cousin, John Mark, with them. But Paul refused to, as John had abandoned them on their first missionary trip. So Barnabus took John and sailed to Cyprus, while Paul took Silas, one of the leaders of the Jerusalem church, and went on his own missionary journey. Paul goes overland to the area of Derbe and Lystra and meets Timothy, who joins him and Silas on the journey. The trio sails to Troas and later to the island of Samothrace. Paul and Silas journey to the city of Philippi, where a woman named Lydia is converted, along with several other people. Paul heals a spirit possessed girl. And he and Silas are thrown in jail for it. But at midnight, God gives them a miraculous escape. (See the section on Paul put in prison in Philippi). The trio heads to Amphipolis and Apollonia to preach in the synagogue. But angry mobs formed against them, so they quickly escaped to Berea. The Jews in Berea accepted Paul's message much better than those in Amphipolis and Apollonia. Paul converted thousands and set sail for Athens while Silas and Timothy stayed behind. Paul accuses the people of Athens for worshipping idols, and while some accept his message, others attempt to prove it wrong. Paul meets Aquila and Priscilla at Corinth. Timothy and Silas also meet back with him in the same place. The group stayed in the city for a year and a half, preaching the gospel and reasoning with those who refused it. They later journeyed to Ephesus and stayed for a little while before returning to Antioch.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        Many places around the world heard about Jesus for the first time and lots of people in those places were converted to Christ. This makes sense, as it was the goal of any missionary journey back then, and even now.
+                        <br><br>
+                        <b>What it means to us:</b>
+                        <br><br>
+                        Trust in God, Paul and Silas displayed this many times in the journey and most notably in the prison of Philippi (see the section on Paul in Philippi's prison). Don't worship idols, there's only one way to heaven and that's through Jesus Christ. It's mentioned that when Paul's group stayed in Corinth, they reasoned with unbelievers of Christianity. When we're talking to people who we might not agree with, remember to be respectful of their beliefs, even if you're trying to change them.
+                    </label>
+                </form>
+            </div>
+            
+            <div class="paul_execution">
+                <form>
+                    <img src="{% static 'paul_execute.webp' %}" class="img" alt="Paul's Execution Image">
+                    <label class="label">
+                        <b>Paul's Execution (Noah)</b>
+                        <br><br>
+                        <b>What Happened:</b>
+                        <br><br>
+                        While not specifically mentioned in Acts, tradition states that he was beheaded after being arrested for a final time. This is a very interesting thing (I feel like Mr. Fairweather during daily devos) because of how he was executed. Peter, Jesus, and many other early christians were crucified because of their faith. However, Paul was spared the pain because he was a Roman citizen.
+                        <br><br>
+                        <b>Why it was important:</b>
+                        <br><br>
+                        Paul was one of, if not the most, important people in helping spread Christianity throughout the globe. He went on missionaries that reached out to thousands of people, helped establish churches all over the Roman empire, and went on missionaries that travelled to two continents. The death of such an important person is probably important.
+                    </label>
+                </form>
+            </div>
+
+
+            
+
+
+        </div>
+
+
+    </body>
+</html>

@@ -1,0 +1,296 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .title_div{
+                position:absolute;
+                width:1450px;
+                height:155px;
+                background-color:rgb(0, 115, 176);
+                margin-left:-10px;
+                margin-top:-10px;
+            }
+
+            .places_title{
+                position:absolute;
+                width:1000px;
+                height:100px;
+                font-size:75px;
+                margin-left:600px;
+                margin-top:50px;
+            }
+            
+            .navbar {
+                position: fixed; 
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 35px;
+                background-color: rgb(40, 40, 55);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 50px;
+                z-index: 1000;
+                border-bottom: 2px solid rgb(96, 96, 114);
+            }
+
+            .nav-logo-link {
+                text-decoration: none; 
+                color:white;
+                font-family:fantasy;
+                font-size:30px;        
+            }
+
+            .nav-logo:hover {
+                cursor: pointer;       
+                opacity: 0.8; 
+                color:turquoise;         
+            }
+
+            .nav-links {
+                display: flex;
+                list-style: none;
+                margin-right:70px;
+            }
+
+            .nav-links li {
+                margin-left: 30px;
+            }
+
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-family: sans-serif;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            .nav-links a:hover {
+                color: #ffd700; 
+            }
+
+            .body{
+                position:absolute;
+                width:1450px;
+                height:2500px;
+                margin-top:140px;
+                background-color:lightblue;
+                margin-left:-10px;
+            }
+
+            .img{
+                position:absolute;
+                width:200px;
+                height:300px;
+                margin-left:20px;
+                margin-top:-10px;
+            }
+
+            .label{
+                position:absolute;
+                margin-left:250px;
+                margin-right:20px;
+                font-family:fantasy;
+            }
+
+
+            .bullets{
+                position:absolute;
+                margin-left:20px;
+            }
+            
+            .jerusalem {
+                position: absolute;
+                margin-top: 30px;
+                width: 1440px;
+            }
+
+            .judea {
+                position: absolute;
+                margin-top: 380px;
+                width: 1440px;
+            }
+
+            .samaria {
+                position: absolute;
+                margin-top: 730px;
+                width: 1440px;
+            }
+
+            .damascus {
+                position: absolute;
+                margin-top: 1080px;
+                width: 1440px;
+            }
+
+            .antioch {
+                position: absolute;
+                margin-top: 1430px;
+                width: 1440px;
+            }
+
+            .philippi {
+                position: absolute;
+                margin-top: 1780px;
+                width: 1440px;
+            }
+
+            .rome {
+                position: absolute;
+                margin-top: 2130px;
+                width: 1440px;
+            }
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="title_div">
+            <label class="places_title">Places</label>
+        </div>
+
+        <nav class="navbar">
+            <a href="{% url 'home' %}" class="nav-logo-link">
+                <div class="nav-logo">Acts Project</div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="{% url 'people_page' %}">People/People Groups</a></li>
+                <li><a href="{% url 'places_page' %}">Places</a></li>
+                <li><a href="{% url 'time_page' %}">Time Periods</a></li>
+                <li><a href="{% url 'events_page' %}">Events</a></li>
+                <li><a href="{% url 'miscellaneous_page' %}">Miscellaneous</a></li>
+                <li><a href="{% url 'jokes_page' %}">Bible 8 Jokes</a></li>
+                <li><a href="{% url 'about_page' %}">About</a></li>
+            </ul>
+        </nav>
+
+        <div class="body">
+            <div class="jerusalem">
+                <form>
+                    <img src="{% static 'jerusalem.jpg' %}" class="img" alt="Jerusalem Image">
+                    <label class="label">
+                        <b>Jerusalem</b>
+                        <br><br>
+                        In the beginning of Acts, Jesus' first followers met here to discuss and gather at its temples, and pentecost happened here. They showed the people of other religions God's power, but were persecuted by strong believers of other religions. From here, the Jewish Christians fled Jerusalem and spread the word of God to other lands. It is also In Jerusalem where it is proved that God loves and saves regular people as well. Lastly, Jerusalem was where the old testament was fulfilled, and Judaism overthrown.
+                        <br><br>
+                        <ul class="bullets">
+                            <li>Holy Sepulchre - Where Jesus was crucified</li>
+                            <li>Church of All Nations - Reportedly the church that Jesus prayed at to his father for safety</li>
+                            <li>St. Anne's Church - Where Mary, the mother of Jesus, was born</li>
+                        </ul>
+                        <br><br><br><br><br><br>
+                    </label>
+                </form>
+            </div>
+            
+            <div class="judea">
+                <form>
+                    <img src="{% static 'judea.webp' %}" class="img" alt="Judea Image">
+                    <label class="label">
+                        <b>Judea</b>
+                        <br><br>
+                        Judea is the region surrounding Jerusalem, and was the place many Christians flocked to when kicked out of Israel, becoming a culturally important location that follows God. It is one of the other regions that are highly affected by the travelers.
+                        <br><br>
+                        <ul class="bullets">
+                            <li>Church of Nativity - Built over the birthplace of Jesus</li>
+                            <li>Saint George's Monastery - Built into the dry cliffs to overlook the desert</li>
+                        </ul>
+                        <br><br><br><br><br>
+                    </label>
+                </form>
+            </div>
+            
+            <div class="samaria">
+                <form>
+                    <img src="{% static 'samaria.webp' %}" class="img" alt="Samaria Image">
+                    <label class="label">
+                        <b>Samaria</b>
+                        <br><br>
+                        Samaria was a city around the mountains around nearby Jerusalem, and when the people were dividing the promised land among different leaders. Samaria was given to Manasseh and Ephraim. It was religiously an ally of Jerusalem but also fought against them, and was a site where many famous people in the Bible such as Peter, John, and Philip the evangelist preached and spread Christianity.
+                        <br><br>
+                        <ul class="bullets">
+                            <li>The site where Jesus said the Good Samaritan Parable</li>
+                            <li>Sebastia Cathedral - Contains the remains of John the Baptist and housed people from Byzantine, Rome, and the Crusades</li>
+                        </ul>
+                        <br><br><br><br><br>
+                    </label>
+                </form>
+            </div>
+            
+            <div class="damascus">
+                <form>
+                    <img src="{% static 'damascus.webp' %}" class="img" alt="Damascus Image">
+                    <label class="label">
+                        <b>Damascus</b>
+                        <br><br>
+                        Damascus is the region where the most essential stories of the Bible took place. Paul was converted on the road to this city to follow God, where he saw God speaking to him directly, and was blinded by his glory. Furthermore, much longer ago, Moses led the Jewish people out of Egypt into Damascus originally, though it was a dangerous journey. Lastly, David's victory over the Goliath and Daniel's protection from the lions, done by God, occurred here.
+                        <br><br>
+                        <ul class="bullets">
+                            <li>Saint Paul Chapel - Chapel in which was built over the same region where Paul (Saul) escaped prison to spread Christianity</li>
+                            <li>Mariami Cathedral of Damascus - Church along a road in Damascus dedicated to Mary, Mother of Jesus</li>
+                        </ul>
+                        <br><br><br><br><br>
+                    </label>
+                </form>
+            </div>
+            
+            <div class="antioch">
+                <form>
+                    <img src="{% static 'antioch.jpg' %}" class="img" alt="Antioch Image">
+                    <label class="label">
+                        <b>Antioch</b>
+                        <br><br>
+                        Antioch, one of the biggest cities in the Roman Empire, was originally diverse with many different people all together in this city. Additionally, the churches of Antioch were full of both Jews and Gentiles praising God together, also with many coexisting races. Also, Paul and Barnabas' main center of preaching was in this city, so that is why it was significant in the spread of Christianity.
+                        <br><br>
+                        <ul class="bullets">
+                            <li>Orontes River - Allowed Antioch to prosper and provided for many around the city</li>
+                            <li>Church of Saint Peter - Saint Peter preached here, and is the first official church</li>
+                        </ul>
+                        <br><br><br><br><br>
+                    </label>
+                </form>
+            </div>
+            
+            <div class="philippi">
+                <form>
+                    <img src="{% static 'philippi.jpg' %}" class="img" alt="Philippi Image">
+                    <label class="label">
+                        <b>Philippi</b>
+                        <br><br>
+                        Philippi is a Greek and Roman city which was full of both Jews and gentiles, which was significant for their conversion and unity. When Paul entered the city, he was originally jailed here in the first regions of Europe for preaching Christianity. After Paul left, a church was formed here and continued to thrive.
+                        <br><br>
+                        <ul class="bullets">
+                            <li>Lydia's Baptistry - Where Paul was baptized, still a church there today</li>
+                        </ul>
+                        <br><br><br><br>
+                    </label>
+                </form>
+            </div>
+            
+            <div class="rome">
+                <form>
+                    <img src="{% static 'rome.avif' %}" class="img" alt="Rome Image">
+                    <label class="label">
+                        <b>Rome</b>
+                        <br><br>
+                        Rome was a hotspot for persecutions originally, and many christians such as Stephen were stoned for the religion, but this inspired many, as no one gave up the religion and trusted God. Many Romans were swayed by this because they saw the power of this faith. Gradually, the entire Roman civilization bowed down to God, and after they broke down, the rest of the empires spread christianity to Europe.
+                        <br><br>
+                        <ul class="bullets">
+                            <li>St. Peter's Basilica - Burial of Saint Peter, largest church in the world</li>
+                            <li>Basilica of Saint John Lateran - Official Church of Rome</li>
+                            <li>Martyring of Peter and Paul - Proved to Rome the power of God</li>
+                        </ul>
+                        <br><br><br><br><br><br>
+                    </label>
+                </form>
+            </div>
+
+        </div>
+
+
+    </body>
+</html>
